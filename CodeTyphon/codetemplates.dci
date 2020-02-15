@@ -2,6 +2,7 @@
 $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
+!FileVersion=1
 $(AttributesEnd)
 $Param(VariableName): array[0..$Param(HighNumber)] of $Param(Type);
 |
@@ -135,7 +136,8 @@ if $Param(Conditional) then
 begin
   |
 end
-else begin
+else
+begin
 
 end$AddSemicolon()
 [procedure | procedure declaration]
@@ -146,7 +148,6 @@ procedure $Param(ProcName)|($Param());
 begin
 
 end;
-
 [ofall | case of all enums]
 $(AttributesStart)
 EnableMakros=true
@@ -257,7 +258,6 @@ $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
 writeln('$ProcedureName() '|)$AddSemicolon()
-
 [generic | generic]
 generic
 [specialize | specialize]
@@ -288,3 +288,38 @@ constructor Create(|);
 destructor Destroy; override;
 [raise | raise]
 raise Exception.Create('Error Message');
+[prws | property read write]
+$(AttributesStart)
+!Version=1
+$(AttributesEnd)
+property $param(Name) read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1);|
+[prwd | property read write default]
+$(AttributesStart)
+!Version=1
+$(AttributesEnd)
+property $param(Name) read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1) default $param(Const);|
+[pirws | property Integer read write]
+$(AttributesStart)
+!Version=1
+$(AttributesEnd)
+property $param(Name): Integer read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1);|
+[pirwd | property Integer read write default]
+$(AttributesStart)
+!Version=1
+$(AttributesEnd)
+property $param(Name): Integer read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1) default $param(Const);|
+[psrw | property string read write]
+$(AttributesStart)
+!Version=1
+$(AttributesEnd)
+property $param(Name): string read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1);|
+[pdrwd | property Double read write default]
+$(AttributesStart)
+!Version=1
+$(AttributesEnd)
+property $param(Name): Double read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1) default $param(Const);|
+[pdrws | property Double read write]
+$(AttributesStart)
+!Version=1
+$(AttributesEnd)
+property $param(Name): Double read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1);| 
