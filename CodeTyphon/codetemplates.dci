@@ -323,3 +323,12 @@ $(AttributesStart)
 !Version=1
 $(AttributesEnd)
 property $param(Name): Double read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1);| 
+[ford | for statement - (descending order)]
+$(AttributesStart)
+EnableMakros=true
+RemoveChar=true
+$(AttributesEnd)
+for $Param(CounterVar) := $Param(0) downto $Param(Count) do
+begin
+  |
+end$AddSemicolon()
