@@ -1,21 +1,21 @@
-ÌáÉıGithubÏÂÔØËÙ¶È
+ï»¿æå‡Githubä¸‹è½½é€Ÿåº¦
 
-Í¨¹ıĞŞ¸ÄhostsÎÄ¼şÀ´ÌáËÙ£¨¸Ã·½·¨Ò²¿É¼ÓËÙÆäËûÒòÎªCDN±»ÆÁ±Îµ¼ÖÂ·ÃÎÊÂıµÄÍøÕ¾£©
+é€šè¿‡ä¿®æ”¹hostsæ–‡ä»¶æ¥æé€Ÿï¼ˆè¯¥æ–¹æ³•ä¹Ÿå¯åŠ é€Ÿå…¶ä»–å› ä¸ºCDNè¢«å±è”½å¯¼è‡´è®¿é—®æ…¢çš„ç½‘ç«™ï¼‰
 
-µÚÒ»²½£º»ñÈ¡GitHubµÄIPµØÖ·
+ç¬¬ä¸€æ­¥ï¼šè·å–GitHubçš„IPåœ°å€
 
-Í¨¹ı·ÃÎÊ£ºhttp://tool.chinaz.com/dns»òÕßhttps://www.ipaddress.com/ »ñÈ¡ÒÔÏÂÈı¸öÍøÕ¾µÄip
+é€šè¿‡è®¿é—®ï¼šhttp://tool.chinaz.com/dnsæˆ–è€…https://www.ipaddress.com/ è·å–ä»¥ä¸‹ä¸‰ä¸ªç½‘ç«™çš„ip
 
-github.com¡¢github.global.ssl.fastly.net¡¢codeload.github.com
+github.comã€github.global.ssl.fastly.netã€codeload.github.com
 
-£¨assets-cdn.github.com ¡¢avatars0.githubusercontent.com £©
+ï¼ˆassets-cdn.github.com ã€avatars0.githubusercontent.com ï¼‰
  
 
-µÚ¶ş²½£ºÑ¡ÔñTTLÖµ½ÏĞ¡µÄÌîÈëhostsÎÄ¼şÖĞ
+ç¬¬äºŒæ­¥ï¼šé€‰æ‹©TTLå€¼è¾ƒå°çš„å¡«å…¥hostsæ–‡ä»¶ä¸­
 
-hostsÎÄ¼şÂ·¾¶£ºC:\Windows\System32\drivers\etc
+hostsæ–‡ä»¶è·¯å¾„ï¼šC:\Windows\System32\drivers\etc
 
-£¨×¢£ºĞŞ¸ÄhostsÎÄ¼şĞèÒª¹ÜÀíÔ±È¨ÏŞ£¬¿ÉÒÔ¸´ÖÆµ½×ÀÃæĞŞ¸Ä¹ıºóÔÙ¸²¸ÇÎÄ¼ş£©
+ï¼ˆæ³¨ï¼šä¿®æ”¹hostsæ–‡ä»¶éœ€è¦ç®¡ç†å‘˜æƒé™ï¼Œå¯ä»¥å¤åˆ¶åˆ°æ¡Œé¢ä¿®æ”¹è¿‡åå†è¦†ç›–æ–‡ä»¶ï¼‰
 
 151.101.109.194 github.global.ssl.fastly.net
 192.30.253.113 github.com
@@ -24,7 +24,7 @@ hostsÎÄ¼şÂ·¾¶£ºC:\Windows\System32\drivers\etc
 151.101.72.133 avatars1.githubusercontent.com
 192.30.255.120 codeload.github.com
 
-²Î¿¼£º
+å‚è€ƒï¼š
 # Github
 151.101.44.249 http://github.global.ssl.fastly.net
 192.30.253.113 http://github.com
@@ -44,14 +44,34 @@ hostsÎÄ¼şÂ·¾¶£ºC:\Windows\System32\drivers\etc
 185.31.18.133 http://avatars0.githubusercontent.com
 
 
-µÚÈı²½£ºË¢ĞÂDNS
+ç¬¬ä¸‰æ­¥ï¼šåˆ·æ–°DNS
 
-ĞŞ¸ÄÍêhosts»¹²»»áÁ¢¼´ÉúĞ§£¬ĞèÒªË¢ĞÂDNS»º´æ
+ä¿®æ”¹å®Œhostsè¿˜ä¸ä¼šç«‹å³ç”Ÿæ•ˆï¼Œéœ€è¦åˆ·æ–°DNSç¼“å­˜
 
-linuxÏÂÊäÈëÖ¸Áî£ºsudo /etc/init.d/networking restart ¼´¿É¡£
+linuxä¸‹è¾“å…¥æŒ‡ä»¤ï¼šsudo /etc/init.d/networking restart å³å¯ã€‚
 
-windowsÏÂË¢ĞÂDNSµÄ·½·¨£º
+windowsä¸‹åˆ·æ–°DNSçš„æ–¹æ³•ï¼š
 
-´ò¿ªCMD
+æ‰“å¼€CMD
 
-ÊäÈëipconfig /flushdns
+è¾“å…¥ipconfig /flushdns
+
+
+è§£å†³ä¸‹è½½GitHubé¡¹ç›®é€Ÿåº¦æ…¢çš„é—®é¢˜ï¼ˆ2019.1.21äº²æµ‹æœ‰æ•ˆï¼‰
+åŸåˆ›åšä¸€åªAIå°èƒ½æ‰‹ æœ€åå‘å¸ƒäº2019-01-21 09:47:39 é˜…è¯»æ•° 36142  æ”¶è—
+å±•å¼€
+æ–¹æ³•ä¸€ï¼šä½¿ç”¨ladderï¼ˆéœ€è¦è´¹ç”¨ï¼‰
+æ–¹æ³•äºŒï¼šä¿®æ”¹hostsæ–‡ä»¶ï¼ˆç¨³å®šï¼Œå…è´¹ï¼‰
+
+æ–¹æ³•äºŒå…·ä½“æ“ä½œï¼š
+step1 åœ¨æˆ‘çš„ç”µè„‘è·¯å¾„ä¸­è¾“å…¥ï¼šC:\Windows\System32\drivers\etc
+step2 ç‚¹å‡»hostsæ–‡ä»¶ï¼Œå³é”®å±æ€§ï¼Œä¿®æ”¹æœ¬æœºç”¨æˆ·çš„æƒé™ï¼Œç»™äºˆå…¨éƒ¨æƒé™ï¼Œä¿å­˜è®¾ç½®
+step3 åŒå‡»hostsæ–‡ä»¶ï¼Œä»¥è®°äº‹æœ¬å½¢å¼æ‰“å¼€ï¼Œåœ¨åŸå§‹æ–‡æœ¬ä¸‹ä¸€è¡Œç²˜è´´ä¸Šä»¥ä¸‹åœ°å€ï¼š
+219.76.4.4 github-cloud.s3.amazonaws.com
+
+ä¹Ÿå¯ä»¥æ·»åŠ å…¶ä»–çš„åœ°å€ï¼š
+åœ°å€æ¥æºï¼šåœ¨http://tool.chinaz.com/dnsä¸­æœç´¢ github.global.ssl.fastly.net å’Œ github.com
+åˆ†åˆ«æ‰¾åˆ°å»¶è¿Ÿå°çš„åœ°å€ï¼ŒåŠ å…¥åˆ°hostsæ–‡ä»¶ä¸­å³å¯
+ä¿å­˜
+step4 å†æ¬¡æ‰“å¼€ä½ è¦ä¸‹è½½çš„githubé¡µé¢ï¼Œç‚¹å‡»download zipï¼Œæ­¤æ—¶å‘ç°é€Ÿåº¦é£™å‡åˆ°3Mb/s
+â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
