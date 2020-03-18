@@ -47,9 +47,9 @@ $Param(ClassName) = class($Param(TObject))
 private
 
 public
-  |
   constructor Create;
   destructor Destroy; override;
+  |
 end;
 [classd | class declaration (no parts)]
 $(AttributesStart)
@@ -70,10 +70,11 @@ private
 protected
 
 public
-  |
   constructor Create; override;
   destructor Destroy; override;
+  |
 published
+
 end;
 [fors | for (no begin/end)]
 $(AttributesStart)
@@ -144,9 +145,9 @@ end$AddSemicolon()
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
-procedure $Param(ProcName)|($Param());
+procedure $param(Name)($param( ));
 begin
-
+  |
 end;
 [ofall | case of all enums]
 $(AttributesStart)
@@ -332,3 +333,5 @@ for $Param(CounterVar) := $Param(0) downto $Param(Count) do
 begin
   |
 end$AddSemicolon()
+[inherited | inherited]
+inherited
