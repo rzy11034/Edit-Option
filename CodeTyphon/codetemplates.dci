@@ -43,7 +43,7 @@ $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-$Param(ClassName) = class($Param(InheritedClass))
+$Param(ClassName) = class($Param(TObject))
 private
 
 public
@@ -56,7 +56,7 @@ $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-$Param(ClassName) = class($Param(InheritedClass))
+$Param(ClassName) = class($Param(TObject))
 |
 end;
 [classc | class declaration (with Create/Destroy overrides)]
@@ -64,7 +64,7 @@ $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-$Param(ClassName) = class($Param(InheritedClass))
+$Param(ClassName) = class($Param(TObject))
 private
 
 protected
