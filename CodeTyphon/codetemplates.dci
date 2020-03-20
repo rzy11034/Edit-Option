@@ -289,41 +289,6 @@ constructor Create(|);
 destructor Destroy; override;
 [raise | raise]
 raise Exception.Create('Error Message');
-[prws | property read write]
-$(AttributesStart)
-!Version=1
-$(AttributesEnd)
-property $param(Name) read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1);|
-[prwd | property read write default]
-$(AttributesStart)
-!Version=1
-$(AttributesEnd)
-property $param(Name) read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1) default $param(Const);|
-[pirws | property Integer read write]
-$(AttributesStart)
-!Version=1
-$(AttributesEnd)
-property $param(Name): Integer read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1);|
-[pirwd | property Integer read write default]
-$(AttributesStart)
-!Version=1
-$(AttributesEnd)
-property $param(Name): Integer read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1) default $param(Const);|
-[psrw | property string read write]
-$(AttributesStart)
-!Version=1
-$(AttributesEnd)
-property $param(Name): string read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1);|
-[pdrwd | property Double read write default]
-$(AttributesStart)
-!Version=1
-$(AttributesEnd)
-property $param(Name): Double read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1) default $param(Const);|
-[pdrws | property Double read write]
-$(AttributesStart)
-!Version=1
-$(AttributesEnd)
-property $param(Name): Double read $param(Get)$param(Name,sync=1) write $param(Set)$param(Name,sync=1);| 
 [ford | for statement - (descending order)]
 $(AttributesStart)
 EnableMakros=true
@@ -335,3 +300,8 @@ begin
 end$AddSemicolon()
 [inherited | inherited]
 inherited
+[ppt | property read write]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+property $param(Name):$param(Type) read $param(__get)$param(Name,sync=1) write $param(__set)$param(Name,sync=1);|
