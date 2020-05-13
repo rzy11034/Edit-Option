@@ -305,3 +305,11 @@ $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
 property $param(Name):$param(Type) read $param(__get)$param(Name,sync=1) write $param(__set)$param(Name,sync=1);|
+[eb | else begin end]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+else
+begin
+  |
+end;
