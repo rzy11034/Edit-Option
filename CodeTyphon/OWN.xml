@@ -2,22 +2,45 @@
 <CONFIG>
   <Desktops Count="1">
     <Desktop1 Name="OWN" DockMaster="TIDEGlassDockMaster">
-      <Desktop Version="2" FormIdCount="42">
-        <FormIdList a1="MainIDE" a2="SourceNotebook" a3="MessagesView" a4="BreakPoints" a5="MacroListView" a6="ObjectInspectorDlg" a7="CodeBrowser" a8="UnitDependencies" a9="ComponentListForm" a10="FPDocEditor" a11="JumpHistory" a12="IssueBrowser" a13="CodeExplorerView" a14="ProjectInspector" a15="CodeOceanForm" a16="SearchResults" a17="DbgOutput" a18="PropEditorsForm" a19="Watches" a20="Locals" a21="CallStack" a22="EvaluateModify" a23="Registers" a24="Assembler" a25="Inspect" a26="DbgEvents" a27="PseudoTerminal" a28="Threads" a29="DbgHistory" a30="ClipBrdHistory" a31="PkgGraphExplorer" a32="EditorFileManager" a33="AnchorEditor" a34="TabOrderEditor" a35="ComponentList" a36="IDETodoWindow" a37="PackageEditor_fpgui_toolkit" a38="LoggerForm" a39="FileBrowser" a40="PackageEditor_bs_Utils" a41="PackageEditor_adFCL" a42="PackageEditor_adLCLBase"/>
+      <Desktop Version="2" FormIdCount="43">
+        <FormIdList a1="MainIDE" a2="SourceNotebook" a3="MessagesView" a4="Inspect" a5="SearchResults" a6="BreakPoints" a7="MacroListView" a8="ObjectInspectorDlg" a9="CodeBrowser" a10="UnitDependencies" a11="ComponentListForm" a12="FPDocEditor" a13="JumpHistory" a14="IssueBrowser" a15="CodeExplorerView" a16="ProjectInspector" a17="CodeOceanForm" a18="DbgOutput" a19="PropEditorsForm" a20="Watches" a21="Locals" a22="CallStack" a23="EvaluateModify" a24="Registers" a25="Assembler" a26="DbgEvents" a27="PseudoTerminal" a28="Threads" a29="DbgHistory" a30="ClipBrdHistory" a31="PkgGraphExplorer" a32="EditorFileManager" a33="AnchorEditor" a34="TabOrderEditor" a35="ComponentList" a36="IDETodoWindow" a37="PackageEditor_fpgui_toolkit" a38="LoggerForm" a39="FileBrowser" a40="PackageEditor_bs_Utils" a41="PackageEditor_adFCL" a42="PackageEditor_adLCLBase" a43="CodyFindOverloadsWindow"/>
       </Desktop>
       <MainIDE>
-        <CustomPosition Width="1920" Height="1001"/>
+        <Caption Value="MainIDE"/>
+        <CustomPosition Width="320" Height="240"/>
         <WindowState Value="Maximized"/>
         <Visible Value="True"/>
       </MainIDE>
       <SourceNotebook>
-        <CustomPosition Left="577" Top="125" Width="1339" Height="901"/>
+        <Caption Value="SourceNotebook"/>
+        <CustomPosition Left="577" Top="131" Width="1339" Height="895"/>
         <Visible Value="True"/>
       </SourceNotebook>
       <MessagesView>
-        <CustomPosition Left="518" Top="125" Width="1398" Height="901"/>
+        <Caption Value="MessagesView"/>
+        <CustomPosition Left="609" Top="714" Width="1319" Height="276"/>
       </MessagesView>
+      <Inspect>
+        <Caption Value="Inspect"/>
+        <CustomPosition Left="66" Top="38" Width="644" Height="500"/>
+        <Divider Count="9">
+          <Item0 ID="InspectDataName" Size="125"/>
+          <Item1 ID="InspectDataType" Size="125"/>
+          <Item2 ID="InspectDataValue" Size="125"/>
+          <Item3 ID="InspectDataClass" Size="125"/>
+          <Item4 ID="InspectDataVisibility" Size="125"/>
+          <Item5 ID="InspectMethName" Size="125"/>
+          <Item6 ID="InspectMethType" Size="125"/>
+          <Item7 ID="InspectMethReturns" Size="125"/>
+          <Item8 ID="InspectMethAddress" Size="125"/>
+        </Divider>
+      </Inspect>
+      <SearchResults>
+        <Caption Value="SearchResults"/>
+        <CustomPosition Left="577" Top="128" Width="1339" Height="898"/>
+      </SearchResults>
       <BreakPoints>
+        <Caption Value="BreakPoints"/>
         <CustomPosition Left="518" Top="125" Width="1398" Height="901"/>
         <Divider Count="7">
           <Item0 ID="ColumnBreakState" Size="62"/>
@@ -30,68 +53,136 @@
         </Divider>
       </BreakPoints>
       <MacroListView>
+        <Caption Value="MacroListView"/>
         <CustomPosition Left="390" Top="249" Width="530" Height="484"/>
       </MacroListView>
       <ObjectInspectorDlg>
+        <Caption Value="ObjectInspectorDlg"/>
         <CustomPosition Left="4" Top="141" Width="485" Height="885"/>
       </ObjectInspectorDlg>
       <CodeBrowser>
+        <Caption Value="CodeBrowser"/>
         <CustomPosition Left="247" Top="238" Width="631" Height="500"/>
       </CodeBrowser>
       <UnitDependencies>
+        <Caption Value="UnitDependencies"/>
         <CustomPosition Left="247" Top="238" Width="756" Height="550"/>
       </UnitDependencies>
       <ComponentListForm>
+        <Caption Value="ComponentListForm"/>
         <CustomPosition Left="4" Top="141" Width="485" Height="885"/>
       </ComponentListForm>
       <FPDocEditor>
+        <Caption Value="FPDocEditor"/>
         <CustomPosition Left="297" Top="443" Width="1325" Height="487"/>
       </FPDocEditor>
       <JumpHistory>
+        <Caption Value="JumpHistory"/>
         <CustomPosition Left="297" Top="288" Width="481" Height="532"/>
       </JumpHistory>
       <IssueBrowser>
+        <Caption Value="IssueBrowser"/>
         <CustomPosition Left="297" Top="288" Width="823" Height="506"/>
       </IssueBrowser>
       <CodeExplorerView>
+        <Caption Value="CodeExplorerView"/>
         <CustomPosition Left="4" Top="141" Width="485" Height="885"/>
       </CodeExplorerView>
       <ProjectInspector>
+        <Caption Value="ProjectInspector"/>
         <CustomPosition Left="4" Top="141" Width="485" Height="885"/>
       </ProjectInspector>
       <CodeOceanForm>
+        <Caption Value="CodeOceanForm"/>
         <CustomPosition Left="313" Top="119" Width="1603" Height="907"/>
       </CodeOceanForm>
-      <SearchResults>
-        <CustomPosition Left="474" Top="120" Width="1038" Height="906"/>
-      </SearchResults>
       <DbgOutput>
+        <Caption Value="DbgOutput"/>
         <CustomPosition Left="543" Top="336" Width="481" Height="250"/>
       </DbgOutput>
       <PropEditorsForm>
+        <Caption Value="PropEditorsForm"/>
         <CustomPosition Left="623" Top="347" Width="789" Height="412"/>
       </PropEditorsForm>
+      <Watches>
+        <Caption Value="Watches"/>
+      </Watches>
+      <Locals>
+        <Caption Value="Locals"/>
+      </Locals>
+      <CallStack>
+        <Caption Value="CallStack"/>
+      </CallStack>
+      <EvaluateModify>
+        <Caption Value="EvaluateModify"/>
+      </EvaluateModify>
+      <Registers>
+        <Caption Value="Registers"/>
+      </Registers>
+      <Assembler>
+        <Caption Value="Assembler"/>
+      </Assembler>
+      <DbgEvents>
+        <Caption Value="DbgEvents"/>
+      </DbgEvents>
+      <PseudoTerminal>
+        <Caption Value="PseudoTerminal"/>
+      </PseudoTerminal>
+      <Threads>
+        <Caption Value="Threads"/>
+      </Threads>
+      <DbgHistory>
+        <Caption Value="DbgHistory"/>
+      </DbgHistory>
+      <ClipBrdHistory>
+        <Caption Value="ClipBrdHistory"/>
+      </ClipBrdHistory>
+      <PkgGraphExplorer>
+        <Caption Value="PkgGraphExplorer"/>
+      </PkgGraphExplorer>
+      <EditorFileManager>
+        <Caption Value="EditorFileManager"/>
+      </EditorFileManager>
+      <AnchorEditor>
+        <Caption Value="AnchorEditor"/>
+      </AnchorEditor>
+      <TabOrderEditor>
+        <Caption Value="TabOrderEditor"/>
+      </TabOrderEditor>
+      <ComponentList>
+        <Caption Value="ComponentList"/>
+      </ComponentList>
       <IDETodoWindow>
+        <Caption Value="IDETodoWindow"/>
         <CustomPosition Left="470" Top="124" Width="1080" Height="902"/>
       </IDETodoWindow>
       <PackageEditor_fpgui_toolkit>
+        <Caption Value="PackageEditor_fpgui_toolkit"/>
         <CustomPosition Left="288" Top="231" Width="465" Height="494"/>
       </PackageEditor_fpgui_toolkit>
       <LoggerForm>
+        <Caption Value="LoggerForm"/>
         <CustomPosition Left="447" Top="249" Width="394" Height="291"/>
       </LoggerForm>
       <FileBrowser>
+        <Caption Value="FileBrowser"/>
         <CustomPosition Left="208" Top="161" Width="200" Height="285"/>
       </FileBrowser>
       <PackageEditor_bs_Utils>
+        <Caption Value="PackageEditor_bs_Utils"/>
         <CustomPosition Left="258" Top="231" Width="480" Height="494"/>
       </PackageEditor_bs_Utils>
       <PackageEditor_adFCL>
+        <Caption Value="PackageEditor_adFCL"/>
         <CustomPosition Left="258" Top="231" Width="480" Height="494"/>
       </PackageEditor_adFCL>
       <PackageEditor_adLCLBase>
+        <Caption Value="PackageEditor_adLCLBase"/>
         <CustomPosition Left="258" Top="231" Width="480" Height="494"/>
       </PackageEditor_adLCLBase>
+      <CodyFindOverloadsWindow>
+        <Caption Value="CodyFindOverloadsWindow"/>
+      </CodyFindOverloadsWindow>
       <Dialogs Count="11">
         <Dialog1>
           <Name Value="TLazFindInFilesDialog"/>
@@ -138,7 +229,7 @@
           <Size Width="470" Height="326"/>
         </Dialog11>
       </Dialogs>
-      <AssociatedDebugDesktopName Value="(none)"/>
+      <AssociatedDebugDesktopName Value="Debug"/>
       <CompletionWindowOptions>
         <Width Value="986"/>
         <Height Value="8"/>
@@ -183,25 +274,25 @@
           <Button33 Name="Open package file from List"/>
           <Button34 Name="Package graph"/>
           <Button35 Name="---------------"/>
-          <Button36 Name="Example Projects"/>
-          <Button37 Name="General environment options"/>
-          <Button38 Name="Manage desktops"/>
-          <Button39 Name="---------------"/>
-          <Button40 Name="Add unit to uses section"/>
-          <Button41 Name="Change build mode"/>
-          <Button42 Name="Compile project/program"/>
-          <Button43 Name="Build project/program"/>
-          <Button44 Name="Run without debugging"/>
-          <Button45 Name="Run program"/>
-          <Button46 Name="Pause program"/>
-          <Button47 Name="Stop program"/>
-          <Button48 Name="Step into"/>
-          <Button49 Name="Step over"/>
-          <Button50 Name="Step out"/>
-          <Button51 Name="---------------"/>
-          <Button52 Name="Jump to Implementation"/>
-          <Button53 Name="Jump back"/>
-          <Button54 Name="Jump forward"/>
+          <Button36 Name="General environment options"/>
+          <Button37 Name="Manage desktops"/>
+          <Button38 Name="---------------"/>
+          <Button39 Name="Add unit to uses section"/>
+          <Button40 Name="Change build mode"/>
+          <Button41 Name="Compile project/program"/>
+          <Button42 Name="Build project/program"/>
+          <Button43 Name="Run without debugging"/>
+          <Button44 Name="Run program"/>
+          <Button45 Name="Pause program"/>
+          <Button46 Name="Stop program"/>
+          <Button47 Name="Step into"/>
+          <Button48 Name="Step over"/>
+          <Button49 Name="Step out"/>
+          <Button50 Name="---------------"/>
+          <Button51 Name="Jump to Implementation"/>
+          <Button52 Name="Jump back"/>
+          <Button53 Name="Jump forward"/>
+          <Button54 Name="Toggle view Messages"/>
         </ToolBar1>
       </IDECoolBarOptions>
       <EditorToolBarOptions Visible="False" Version="1" Count="8">
@@ -219,10 +310,10 @@
       </ComponentPaletteOptions>
       <ObjectInspectorOptions>
         <SplitterX>
-          <PropertyPage Value="110"/>
-          <EventPage Value="110"/>
-          <FavoritePage Value="110"/>
-          <RestrictedPage Value="110"/>
+          <PropertyPage Value="191"/>
+          <EventPage Value="209"/>
+          <FavoritePage Value="165"/>
+          <RestrictedPage Value="207"/>
         </SplitterX>
         <ComponentTree>
           <Height Value="226"/>
@@ -233,46 +324,46 @@
       </ObjectInspectorOptions>
       <GlassDocking>
         <Version Value="1"/>
-        <Settings DragThreshold="1" SplitterWidth="1" ScaleOnResize="False" ShowHeaderCaption="False" HideHeaderCaptionFloatingControl="False" HeaderColor="-2147483644" DockSitesCanBeMinimized="False"/>
+        <Settings DragThreshold="1" SplitterWidth="1" ScaleOnResize="False" ShowHeaderCaption="False" HideHeaderCaptionFloatingControl="False" AllowDragging="False" HeaderColor="-2147483644" DockSitesCanBeMinimized="False"/>
         <MainConfig>
-          <Nodes ChildCount="1">
+          <Nodes ChildCount="2">
             <Item1 Name="MainIDE" Type="CustomSite" WindowState="Maximized" ChildCount="1">
               <Bounds Left="-9" Top="-9" Width="1920" Height="1001">
                 <WorkArea>
                   <Rect Right="1920" Bottom="1030"/>
                 </WorkArea>
               </Bounds>
-              <Item1 Name="GlassDockSite9" Type="Layout" WindowState="Maximized" ChildCount="3">
-                <Bounds Top="42" Width="1920" Height="934" SplitterPos="40"/>
+              <Item1 Name="GlassDockSite10" Type="Layout" WindowState="Maximized" ChildCount="3">
+                <Bounds Top="48" Width="1920" Height="928" SplitterPos="43"/>
                 <Anchors Align="Bottom"/>
-                <Item1 Name="GlassDockSite10" Type="Pages" WindowState="Maximized" ChildCount="4">
-                  <Bounds Left="554" Width="1366" Height="934"/>
+                <Item1 Name="GlassDockSite12" Type="Pages" WindowState="Maximized" ChildCount="4">
+                  <Bounds Left="554" Width="1366" Height="928"/>
                   <Anchors Left="GlassDockSplitter2"/>
                   <Item1 Name="SourceNotebook" Type="Control" WindowState="Maximized">
-                    <Bounds Width="1339" Height="901"/>
+                    <Bounds Width="1339" Height="895"/>
                     <Anchors Align="Client"/>
                   </Item1>
-                  <Item2 Name="MessagesView" Type="Control" WindowState="Maximized">
+                  <Item2 Name="BreakPoints" Type="Control" WindowState="Maximized">
                     <Bounds Width="1398" Height="901"/>
                     <Anchors Align="Client"/>
                   </Item2>
-                  <Item3 Name="BreakPoints" Type="Control" WindowState="Maximized">
+                  <Item3 Name="CodeOceanForm" Type="Control" WindowState="Maximized">
                     <Bounds Width="1398" Height="901"/>
                     <Anchors Align="Client"/>
                   </Item3>
-                  <Item4 Name="CodeOceanForm" Type="Control" WindowState="Maximized">
-                    <Bounds Width="1398" Height="901"/>
+                  <Item4 Name="SearchResults" Type="Control" WindowState="Maximized">
+                    <Bounds Width="1339" Height="898"/>
                     <Anchors Align="Client"/>
                   </Item4>
                 </Item1>
                 <Item2 Name="GlassDockSplitter2" Type="SplitterVertical" WindowState="Maximized">
-                  <Bounds Left="552" Width="2" Height="934"/>
+                  <Bounds Left="552" Width="2" Height="928"/>
                 </Item2>
-                <Item3 Name="GlassDockSite11" Type="Pages" WindowState="Maximized" ChildCount="4">
-                  <Bounds Width="552" Height="934"/>
+                <Item3 Name="GlassDockSite14" Type="Pages" WindowState="Maximized" ChildCount="4">
+                  <Bounds Width="552" Height="928"/>
                   <Anchors Right="GlassDockSplitter2"/>
                   <Item1 Name="ProjectInspector" Type="Control" WindowState="Maximized">
-                    <Bounds Width="544" Height="882"/>
+                    <Bounds Width="544" Height="876"/>
                     <Anchors Align="Client"/>
                   </Item1>
                   <Item2 Name="CodeExplorerView" Type="Control" WindowState="Maximized">
@@ -280,7 +371,7 @@
                     <Anchors Align="Client"/>
                   </Item2>
                   <Item3 Name="ObjectInspectorDlg" Type="Control" WindowState="Maximized">
-                    <Bounds Width="485" Height="885"/>
+                    <Bounds Width="544" Height="876"/>
                     <Anchors Align="Client"/>
                   </Item3>
                   <Item4 Name="ComponentListForm" Type="Control" WindowState="Maximized">
@@ -290,6 +381,13 @@
                 </Item3>
               </Item1>
             </Item1>
+            <Item2 Name="MessagesView" Type="Control">
+              <Bounds Left="571" Top="714" Width="1338" Height="276">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1030"/>
+                </WorkArea>
+              </Bounds>
+            </Item2>
           </Nodes>
         </MainConfig>
       </GlassDocking>

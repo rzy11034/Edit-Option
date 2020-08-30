@@ -300,16 +300,21 @@ begin
 end$AddSemicolon()
 [inherited | inherited]
 inherited
-[ppt | property read write]
+[pptgs | property  get set]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
 property $param(Name):$param(Type) read $param(__get)$param(Name,sync=1) write $param(__set)$param(Name,sync=1);|
-[eb | else begin end]
+[repeat | repeat]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
-else
-begin
+repeat
   |
-end;
+until $param(var);
+[pptrw | property read write]
+$(AttributesStart)
+EnableMakros=true
+IgnoreForSelection=true
+$(AttributesEnd)
+property $param(Name):$param(Type) read _$Lower($param(Name,sync=1)) write _$param(Name,sync=1);
