@@ -3,51 +3,125 @@
   <Desktops Count="1">
     <Desktop1 Name="Editing" DockMaster="TIDEGlassDockMaster">
       <Desktop Version="2" FormIdCount="34">
-        <FormIdList a1="MainIDE" a2="MessagesView" a3="SourceNotebook" a4="ObjectInspectorDlg" a5="ProjectInspector" a6="CodeExplorerView" a7="CodeOceanForm" a8="FileBrowser" a9="ComponentListForm" a10="CodeBrowser" a11="SearchResults" a12="PkgGraphExplorer" a13="PseudoTerminal" a14="Watches" a15="BreakPoints" a16="Locals" a17="CallStack" a18="EvaluateModify" a19="Registers" a20="Assembler" a21="DbgOutput" a22="Inspect" a23="DbgEvents" a24="Threads" a25="DbgHistory" a26="UnitDependencies" a27="FPDocEditor" a28="ClipBrdHistory" a29="EditorFileManager" a30="AnchorEditor" a31="TabOrderEditor" a32="IssueBrowser" a33="JumpHistory" a34="ComponentList"/>
+        <FormIdList a1="MainIDE" a2="MessagesView" a3="SourceNotebook" a4="ObjectInspectorDlg" a5="ProjectInspector" a6="CodeExplorerView" a7="ComponentListForm" a8="CodeBrowser" a9="CodeOceanForm" a10="FileBrowser" a11="SearchResults" a12="PkgGraphExplorer" a13="PseudoTerminal" a14="Watches" a15="BreakPoints" a16="Locals" a17="CallStack" a18="EvaluateModify" a19="Registers" a20="Assembler" a21="DbgOutput" a22="Inspect" a23="DbgEvents" a24="Threads" a25="DbgHistory" a26="UnitDependencies" a27="FPDocEditor" a28="ClipBrdHistory" a29="EditorFileManager" a30="AnchorEditor" a31="TabOrderEditor" a32="IssueBrowser" a33="JumpHistory" a34="ComponentList"/>
       </Desktop>
       <MainIDE>
-        <CustomPosition Left="-7" Width="1915" Height="134"/>
+        <Caption Value="MainIDE"/>
+        <CustomPosition Left="-7" Width="1915" Height="100"/>
         <Visible Value="True"/>
       </MainIDE>
       <MessagesView>
-        <CustomPosition Left="669" Top="719" Width="1248" Height="308"/>
+        <Caption Value="MessagesView"/>
+        <CustomPosition Left="498" Top="719" Width="1419" Height="308"/>
         <Visible Value="True"/>
       </MessagesView>
       <SourceNotebook>
-        <CustomPosition Left="498" Top="102" Width="1312" Height="926"/>
+        <Caption Value="SourceNotebook"/>
+        <CustomPosition Left="498" Top="102" Width="1420" Height="926"/>
         <Visible Value="True"/>
       </SourceNotebook>
       <ObjectInspectorDlg>
+        <Caption Value="ObjectInspectorDlg"/>
         <CustomPosition Left="3" Top="101" Width="492" Height="924"/>
-        <Visible Value="True"/>
       </ObjectInspectorDlg>
       <ProjectInspector>
-        <CustomPosition Left="1" Top="101" Width="493" Height="865"/>
-        <Visible Value="True"/>
+        <Caption Value="ProjectInspector"/>
+        <CustomPosition Left="2" Top="103" Width="493" Height="924"/>
       </ProjectInspector>
       <CodeExplorerView>
+        <Caption Value="CodeExplorerView"/>
         <CustomPosition Left="14" Top="100" Width="481" Height="887"/>
-        <Visible Value="True"/>
       </CodeExplorerView>
+      <ComponentListForm>
+        <Caption Value="ComponentListForm"/>
+        <CustomPosition Left="5" Top="103" Width="489" Height="928"/>
+      </ComponentListForm>
+      <CodeBrowser>
+        <Caption Value="CodeBrowser"/>
+        <CustomPosition Left="209" Top="238" Width="650" Height="500"/>
+      </CodeBrowser>
       <CodeOceanForm>
+        <Caption Value="CodeOceanForm"/>
         <CustomPosition Left="585" Top="347" Width="576" Height="412"/>
       </CodeOceanForm>
       <FileBrowser>
+        <Caption Value="FileBrowser"/>
         <CustomPosition Left="209" Top="138" Width="200" Height="300"/>
       </FileBrowser>
-      <ComponentListForm>
-        <CustomPosition Left="5" Top="103" Width="489" Height="928"/>
-        <Visible Value="True"/>
-      </ComponentListForm>
-      <CodeBrowser>
-        <CustomPosition Left="209" Top="238" Width="650" Height="500"/>
-      </CodeBrowser>
       <SearchResults>
+        <Caption Value="SearchResults"/>
         <CustomPosition Left="259" Top="288" Width="1344" Height="300"/>
       </SearchResults>
       <PkgGraphExplorer>
+        <Caption Value="PkgGraphExplorer"/>
         <CustomPosition Left="259" Top="238" Width="844" Height="642"/>
       </PkgGraphExplorer>
+      <PseudoTerminal>
+        <Caption Value="PseudoTerminal"/>
+      </PseudoTerminal>
+      <Watches>
+        <Caption Value="Watches"/>
+      </Watches>
+      <BreakPoints>
+        <Caption Value="BreakPoints"/>
+      </BreakPoints>
+      <Locals>
+        <Caption Value="Locals"/>
+      </Locals>
+      <CallStack>
+        <Caption Value="CallStack"/>
+      </CallStack>
+      <EvaluateModify>
+        <Caption Value="EvaluateModify"/>
+      </EvaluateModify>
+      <Registers>
+        <Caption Value="Registers"/>
+      </Registers>
+      <Assembler>
+        <Caption Value="Assembler"/>
+      </Assembler>
+      <DbgOutput>
+        <Caption Value="DbgOutput"/>
+      </DbgOutput>
+      <Inspect>
+        <Caption Value="Inspect"/>
+      </Inspect>
+      <DbgEvents>
+        <Caption Value="DbgEvents"/>
+      </DbgEvents>
+      <Threads>
+        <Caption Value="Threads"/>
+      </Threads>
+      <DbgHistory>
+        <Caption Value="DbgHistory"/>
+      </DbgHistory>
+      <UnitDependencies>
+        <Caption Value="UnitDependencies"/>
+      </UnitDependencies>
+      <FPDocEditor>
+        <Caption Value="FPDocEditor"/>
+      </FPDocEditor>
+      <ClipBrdHistory>
+        <Caption Value="ClipBrdHistory"/>
+      </ClipBrdHistory>
+      <EditorFileManager>
+        <Caption Value="EditorFileManager"/>
+      </EditorFileManager>
+      <AnchorEditor>
+        <Caption Value="AnchorEditor"/>
+      </AnchorEditor>
+      <TabOrderEditor>
+        <Caption Value="TabOrderEditor"/>
+      </TabOrderEditor>
+      <IssueBrowser>
+        <Caption Value="IssueBrowser"/>
+      </IssueBrowser>
+      <JumpHistory>
+        <Caption Value="JumpHistory"/>
+      </JumpHistory>
+      <ComponentList>
+        <Caption Value="ComponentList"/>
+      </ComponentList>
       <Dialogs Count="15">
         <Dialog1>
           <Name Value="TLazFindInFilesDialog"/>
@@ -110,12 +184,14 @@
           <Size Width="583" Height="387"/>
         </Dialog15>
       </Dialogs>
+      <AssociatedDebugDesktopName Value="Debug"/>
       <IDETitleIncludesBuildMode Value="True"/>
       <CompletionWindowOptions>
         <Width Value="983"/>
         <Height Value="9"/>
       </CompletionWindowOptions>
       <IDECoolBarOptions Count="1">
+        <Visible Value="False"/>
         <Width Value="230"/>
         <ToolBar1 Version="1" Count="48">
           <Button1 Name="New"/>
@@ -168,7 +244,7 @@
           <Button48 Name="Step out"/>
         </ToolBar1>
       </IDECoolBarOptions>
-      <EditorToolBarOptions Version="1" Count="31">
+      <EditorToolBarOptions Version="1" Count="32">
         <Button1 Name="NewUnit"/>
         <Button2 Name="NewForm"/>
         <Button3 Name="New"/>
@@ -200,6 +276,7 @@
         <Button29 Name="Change build mode"/>
         <Button30 Name="---------------"/>
         <Button31 Name="Toggle view Messages"/>
+        <Button32 Name="Manage desktops"/>
       </EditorToolBarOptions>
       <ObjectInspectorOptions>
         <SplitterX>
@@ -221,14 +298,14 @@
         <MainConfig>
           <Nodes ChildCount="7">
             <Item1 Name="MainIDE" Type="CustomSite">
-              <Bounds Left="-7" Width="1915" Height="134">
+              <Bounds Left="-7" Width="1915" Height="100">
                 <WorkArea>
                   <Rect Right="1920" Bottom="1030"/>
                 </WorkArea>
               </Bounds>
             </Item1>
             <Item2 Name="SourceNotebook" Type="Control">
-              <Bounds Left="489" Top="64" Width="1312" Height="926">
+              <Bounds Left="489" Top="64" Width="1420" Height="926">
                 <WorkArea>
                   <Rect Right="1920" Bottom="1030"/>
                 </WorkArea>
@@ -242,14 +319,14 @@
               </Bounds>
             </Item3>
             <Item4 Name="MessagesView" Type="Control">
-              <Bounds Left="660" Top="681" Width="1248" Height="308">
+              <Bounds Left="489" Top="681" Width="1419" Height="308">
                 <WorkArea>
                   <Rect Right="1920" Bottom="1030"/>
                 </WorkArea>
               </Bounds>
             </Item4>
             <Item5 Name="ProjectInspector" Type="Control">
-              <Bounds Left="-8" Top="63" Width="493" Height="865">
+              <Bounds Left="-7" Top="65" Width="493" Height="924">
                 <WorkArea>
                   <Rect Right="1920" Bottom="1030"/>
                 </WorkArea>
