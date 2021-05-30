@@ -2,3 +2,5 @@
 *.dci linguist-language=pascal
 *.cfg linguist-language=pascal
 *.xml linguist-language=pascal
+*.inc linguist-language=pascal
+*.ctpkg linguist-language=pascal
