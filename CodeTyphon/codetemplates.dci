@@ -179,7 +179,7 @@ $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-$Param(VarName) := $Param(TMyClassName).Create;
+$Param(VarName) := $Param(TMyClassName).Create($Param());
 try
   |
 finally
