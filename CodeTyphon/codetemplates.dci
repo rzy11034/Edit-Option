@@ -317,4 +317,4 @@ $(AttributesStart)
 EnableMakros=true
 IgnoreForSelection=true
 $(AttributesEnd)
-property $param(Name):$param(Type) read _$Lower($param(Name,sync=1)) write _$param(Name,sync=1);
+property $param(Name):$param(Type) read ($param(Name,sync=1)) write _$param(Name,sync=1);
