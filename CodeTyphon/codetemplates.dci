@@ -304,7 +304,7 @@ inherited
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
-property $param(Name):$param(Type) read $param(__get)$param(Name,sync=1) write $param(__set)$param(Name,sync=1);|
+property $param(Name):$param(Type) read __Get$param(Name,sync=1) write __Set$param(Name,sync=1);|
 [repeat | repeat]
 $(AttributesStart)
 EnableMakros=true
@@ -317,4 +317,4 @@ $(AttributesStart)
 EnableMakros=true
 IgnoreForSelection=true
 $(AttributesEnd)
-property $param(Name):$param(Type) read ($param(Name,sync=1)) write _$param(Name,sync=1);
+property $param(Name):$param(Type) read _$param(Name,sync=1) write _$param(Name,sync=1);
