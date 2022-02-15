@@ -318,3 +318,11 @@ EnableMakros=true
 IgnoreForSelection=true
 $(AttributesEnd)
 property $param(Name):$param(Type) read _$param(Name,sync=1) write _$param(Name,sync=1);
+[record | record]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+$param(name) = record
+  |
+end$AddSemicolon()
+
