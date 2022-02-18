@@ -294,7 +294,7 @@ $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-for $Param(CounterVar) := $Param(0) downto $Param(Count) do
+for $Param(CounterVar) := $Param(Count) downto $Param(0) do
 begin
   |
 end$AddSemicolon()
