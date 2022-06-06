@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <EditorOptions Version="13">
+    <Color Version="13">
+      <LangObjectPascal Version="13">
+        <ColorScheme Value="Colors"/>
+        <SchemeTwilight>
+          <Assembler Foreground="3404810" UseSchemeGlobals="False"/>
+          <Comment Foreground="1052906" UseSchemeGlobals="False"/>
+          <Directive Foreground="65291" UseSchemeGlobals="False"/>
+          <Reserved_word Foreground="12434804" UseSchemeGlobals="False"/>
+        </SchemeTwilight>
+      </LangObjectPascal>
+      <Globals Version="13">
+        <SchemeTwilight>
+          <ahaLineNumber Foreground="clWhite"/>
+          <ahaGutterSeparator Background="clBlack"/>
+        </SchemeTwilight>
+      </Globals>
+    </Color>
+    <Display EditorFontSize="11" DoNotWarnForFont="Consolas" EditorFont="Consolas" ExtraLineSpacing="0"/>
+    <KeyMapping>
+      <default Count="1">
+        <Version Value="6"/>
+        <printselection Value="80,1,0,0,0,0,0,0"/>
+        <Item1 Name="Identifier completion">
+          <KeyB Default="False" Key1="74" Shift1="4"/>
+        </Item1>
+      </default>
+    </KeyMapping>
+    <General>
+      <Editor ShowTabCloseButtons="False" ScrollPastEof="True" TabWidth="2"/>
+    </General>
+    <Misc TabFontSize="10" PasExtendedKeywordsMode="True">
+      <ScrollOnEditLeftOptions KeepBorderDistance="2" KeepBorderDistancePercent="0" ScrollExtraColumns="5" ScrollExtraPercent="20" ScrollExtraMax="10"/>
+      <ScrollOnEditRightOptions KeepBorderDistance="0" KeepBorderDistancePercent="0" ScrollExtraColumns="10" ScrollExtraPercent="30" ScrollExtraMax="25"/>
+    </Misc>
+    <CodeTools CodeTemplateFileName="C:\Users\Administrator\AppData\Roaming\typhon64\codetemplates.dci" CompletionLongLineHintTypeCompletionLongLineHintType="sclpExtendRightOnly" AutoDelayInMSec="10" AutoDelayHintInMSec="501" AutoRemoveEmptyMethods="True"/>
+    <Mouse>
+      <Default Version="1" CtrlWheel="mwaScrollPage" AltCtrlWheel="mwaScrollPageLessOne" AltCtrlHorizWheel="mwaScrollHorizPageLessOne"/>
+    </Mouse>
+    <FoldConfig>
+      <LangObjectPascal>
+        <TypeLocalVarType>
+          <Settings Modes="fmFold"/>
+        </TypeLocalVarType>
+        <TypeUses>
+          <Settings Modes="fmFold"/>
+        </TypeUses>
+        <TypeClassSection>
+          <Settings Modes="fmFold"/>
+        </TypeClassSection>
+      </LangObjectPascal>
+    </FoldConfig>
+    <CodeFolding UseMarkupOutline="True"/>
+  </EditorOptions>
+</CONFIG>

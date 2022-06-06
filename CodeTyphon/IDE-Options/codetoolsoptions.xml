@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <CodeToolsOptions>
+    <Version Value="2"/>
+    <LineLengthXMLConfig Value="150"/>
+    <ClassHeaderComments Value="False"/>
+    <MethodInsertPolicy Value="Alphabetically"/>
+    <PropertyReadIdentPrefix Value="__Get"/>
+    <PropertyWriteIdentPrefix Value="__Set"/>
+    <PrivateVariablePrefix Value="_"/>
+    <SetPropertyVariablename Value="new"/>
+    <SetPropertyVariableIsPrefix Value="True"/>
+    <SetPropertyVariableUseConst Value="True"/>
+    <IdentifierCompletion AddSemicolon="False" AddAssignOperator="False" AddDo="False" AutoAddParameterBrackets="False" ShowHelp="True"/>
+  </CodeToolsOptions>
+</CONFIG>
