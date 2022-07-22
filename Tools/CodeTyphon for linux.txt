@@ -1,0 +1,5 @@
+﻿Open a terminal and exec:
+sudo nano /etc/sudoers
+
+add at the end of /etc/sudoers the line:
+rzy ALL=(ALL) NOPASSWD: ALL

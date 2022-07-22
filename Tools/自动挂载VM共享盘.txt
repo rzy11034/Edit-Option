@@ -1,0 +1,13 @@
+自动挂载VM共享盘
+
+修改/etc/fstab:
+sudo nano /etc/fstab
+
+最后一行加入如下内容
+
+.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other,defaults 0 0
+
+手动挂载
+
+sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+
