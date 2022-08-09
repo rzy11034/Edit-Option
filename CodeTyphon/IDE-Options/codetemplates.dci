@@ -25,7 +25,8 @@ EnableMakros=true
 $(AttributesEnd)
 begin
   |
-end else
+end
+else
 begin
 
 end$AddSemicolon()
@@ -294,7 +295,7 @@ $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-for $Param(CounterVar) := $Param(Count) downto $Param(0) do
+for $Param(CounterVar) := $Param(integer) downto $Param(0) do
 begin
   |
 end$AddSemicolon()
@@ -317,7 +318,7 @@ $(AttributesStart)
 EnableMakros=true
 IgnoreForSelection=true
 $(AttributesEnd)
-property $param(Name):$param(Type) read _$param(Name,sync=1) write _$param(Name,sync=1);
+property $param(Name):$param(Type) read _$param(Name,sync=1) write _$param(Name,sync=1);|
 [record | record]
 $(AttributesStart)
 EnableMakros=true
