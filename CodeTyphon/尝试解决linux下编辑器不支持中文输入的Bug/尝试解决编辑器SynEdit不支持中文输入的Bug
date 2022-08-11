@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html style="--olcb-folder-code-block-max-height: 80vh;" lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <meta name="description" content="linux下Lazarus 2.2.0 GTK2版代码编辑器及SynEdit控件不支持中文输入（Lazarus for Linux QT版支持中文输入，但发现我常用的控件不支持QT版，控件兼容性还是G">
+    <meta property="og:description" content="linux下Lazarus 2.2.0 GTK2版代码编辑器及SynEdit控件不支持中文输入（Lazarus for Linux QT版支持中文输入，但发现我常用的控件不支持QT版，控件兼容性还是G">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>尝试解决linux下Lazarus 2.2.0版代码编辑器和SynEdit不支持中文输入的Bug - 秋·风 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="https://common.cnblogs.com/favicon.svg" type="image/svg+xml">
+    
+    <style>#home :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs), :not(.cnblogs_code):not(.cnblogs_Highlighter)>pre:not([highlighted]):not([class*="brush:"]) code:not(.hljs) {background: rgb(245, 245, 245);
+        padding: 12px;
+        border: 0.833333px solid rgb(204, 204, 204);
+        border-radius: 3px;
+        border-color: transparent;
+        color: rgb(68, 68, 68);
+        font-family: "Courier New", sans-serif;
+        font-size: 12px</style><link rel="stylesheet" href="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/bundle-cogitation.min.css">
+        <link id="highlighter-theme-cnblogs" type="text/css" rel="stylesheet" href="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/cnblogs.css">
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/bundle-cogitation-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/qiufeng2014/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/qiufeng2014/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/qiufeng2014/wlwmanifest.xml">
+    <script type="text/javascript" async="" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/analytics.js"></script><script type="text/javascript" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/encoder.js"></script><script>
+        var currentBlogId = 184359;
+        var currentBlogApp = 'qiufeng2014';
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'Cogitation';
+        var visitorUserId = '';
+        var hasCustomScript = false;
+        try {
+            if (hasCustomScript && document.referrer && document.referrer.indexOf('baidu.com') >= 0) {
+                Object.defineProperty(document, 'referrer', { value: '' });
+                Object.defineProperty(Document.prototype, 'referrer', { get: function(){ return ''; } });
+            }
+        } catch(error) { }
+        window.cb_enable_mathjax = false;
+        window.mathEngine = 0;
+        window.codeHighlightEngine = 1;
+        window.enableCodeLineNumber = false;
+        window.codeHighlightTheme = 'cnblogs';
+        window.darkModeCodeHighlightTheme = 'vs2015';
+        window.isDarkCodeHighlightTheme = false;
+        window.isDarkModeCodeHighlightThemeDark = true;
+        window.isDisableCodeHighlighter = false;
+        window.enableCodeThemeTypeFollowSystem = false;
+    </script>
+        <script>
+            var currentPostDateAdded = '2021-12-23 11:38';
+        </script>
+    <script src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/jquery-2.2.0.min.js"></script>
+    <script src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/blog-common.min.js"></script><style>.medium-zoom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 300ms;
+  will-change: opacity;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+  cursor: pointer;
+  cursor: zoom-out;
+  opacity: 1;
+}
+
+.medium-zoom-image {
+  cursor: pointer;
+  cursor: zoom-in;
+  /*
+    The `transition` is marked as "!important" for the animation to happen
+    even though it's overriden by another inline `transition` style attribute.
+
+    This is problematic with frameworks that generate inline styles on their
+    images (e.g. Gatsby).
+
+    See https://github.com/francoischalifour/medium-zoom/issues/110
+   */
+  transition: transform 300ms cubic-bezier(0.2, 0, 0.2, 1) !important;
+}
+
+.medium-zoom-image--hidden {
+  visibility: hidden;
+}
+
+.medium-zoom-image--opened {
+  position: relative;
+  cursor: pointer;
+  cursor: zoom-out;
+  will-change: transform;
+}
+</style><script id="hljs-script" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/highlight.min.js" type="text/javascript" async=""></script>
+    
+</head>
+<body class="skin-cogitation has-navbar has-bannerbar">
+<a name="top"></a>
+    <a href="https://www.zego.im/activity/cnblogs1" onclick="countCreativeClicks('C0-ZEGO');countCreativeClicks('ZEGO-term-')" target="_blank" rel="nofollow">
+        <div class="bannerbar forpc" style="background-size: contain;background-color:#2e35d4;">
+            <img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/35695-20220719174329204-1227714420.png" onload="countCreativeImpressions('C0-ZEGO');countCreativeImpressions('ZEGO-term-')">
+            
+        </div>
+    </a>
+<div id="top_nav" class="navbar forpc">
+    <nav id="nav_main" class="navbar-main">
+        <ul id="nav_left" class="navbar-list navbar-left">
+            <li class="navbar-branding">
+                <a href="https://www.cnblogs.com/" title="开发者的网上家园" role="banner">
+                    <img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/logo.svg" alt="博客园Logo">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.cnblogs.com/" onclick="countClicks('skin-navbar-sitehome')">首页</a>
+            </li>
+            <li>
+                <a href="https://news.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-news')">新闻</a>
+            </li>
+            <li>
+                <a href="https://q.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-q')">博问</a>
+            </li>
+            <li>
+                <a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-brands')">专区</a>
+            </li>
+            <li>
+                <a href="https://ing.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-ing')">闪存</a>
+            </li>
+            <li>
+                <a href="https://edu.cnblogs.com/" onclick="countClicks('nav', 'skin-navbar-edu')">班级</a>
+            </li>
+        </ul>
+        <ul id="nav_right" class="navbar-list navbar-right">
+            <li>
+                <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get" role="search">
+                    <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="search" tabindex="3">
+                    <button type="submit" id="zzk_search_button">
+                        <img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/search.svg" alt="搜索">
+                    </button>
+                </form>
+            </li>
+            <li id="navbar_login_status" class="navbar-list">
+                <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔" style="display: none;">
+                    <img id="new_post_icon" class="navbar-icon" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/newpost.svg" alt="写随笔">
+                </a>
+                <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客" style="display: none;">
+                    <img id="myblog_icon" class="navbar-icon" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/myblog.svg" alt="我的博客">
+                </a>
+                <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息" style="display: none;">
+                    <img id="msg_icon" class="navbar-icon" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/message.svg" alt="短消息">
+                    <span id="msg_count" style="display: none"></span>
+                </a>
+                <a id="navbar_lite_mode_indicator" data-current-page="blog" style="display: none" href="javascript:void(0)" alt="简洁模式" title="简洁模式启用，您在访问他人博客时会使用简洁款皮肤展示">
+                    <img class="navbar-icon" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/lite-mode-on.svg" alt="简洁模式">
+                </a>
+                <div id="user_info" class="navbar-user-info dropdown" style="display: none;">
+                    <a class="dropdown-button" href="https://home.cnblogs.com/">
+                        <img id="user_icon" class="navbar-avatar" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/avatar-default.svg" alt="用户头像">
+                    </a>
+                    <div class="dropdown-menu">
+                        <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                        <a href="https://home.cnblogs.com/">我的园子</a>
+                        <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                        <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/lite-mode-check.svg" class="hide"><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                        <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                    </div>
+                </div>
+                <a class="navbar-anonymous" href="https://account.cnblogs.com/signup" style="display: inline;">注册</a>
+                <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()" style="display: inline;">登录</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<div id="top">
+	
+<div>
+	<table>
+		<tbody><tr>
+			<td class="HeaderTitles">
+				<h1 class="HeaderTitle"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/qiufeng2014/">秋·风</a>
+</h1>
+				<p id="tagline"></p>
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+<div class="HeaderBar">
+	<table id="HeaderBar" class="HeaderBar" cellspacing="0" cellpadding="0">
+		<tbody><tr>
+			<td class="HeaderBarTab" nowrap="nowrap">
+&nbsp;
+<a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+ ::
+
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/qiufeng2014/">
+首页</a>
+ ::
+<a href="http://q.cnblogs.com/" class="menu">博问</a> ::
+<a href="http://home.cnblogs.com/ing/" class="menu">闪存</a> ::
+
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+ ::
+
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%A7%8B%C2%B7%E9%A3%8E">
+联系</a> ::
+
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/qiufeng2014/rss/">
+订阅</a>
+
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/qiufeng2014/rss/">
+    <img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/xml.gif" alt="订阅">
+</a> ::
+
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+ ::
+
+
+</td>
+			<td><img id="Header1_BlueTab" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/BlueTabRight.gif" alt="" align="absmiddle"></td>
+			<td class="HeaderBarTabBack" width="100%" nowrap="nowrap">
+				<div class="BlogStatsBar">
+	<table class="BlogStatsBar">
+		<tbody><tr>
+			<td width="100%">
+			</td>
+			<td class="BlogStatsBar" nowrap="nowrap">
+				&nbsp;
+				92 
+				随笔&nbsp;::
+				0 文章
+				::
+				24 评论
+				::
+				
+<span title="总阅读数: 47952">
+47952</span> 阅读 
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+			</td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+</div>
+<div id="leftmenu">	
+
+	    <div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" title="Calendar" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2022/07/11'); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2022年8月</td>
+                            <td class="CalNextPrev" align="right">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2022/09/11'); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <tr>
+        <th class="CalDayHeader" abbr="日" scope="col" align="center">日</th>
+        <th class="CalDayHeader" abbr="一" scope="col" align="center">一</th>
+        <th class="CalDayHeader" abbr="二" scope="col" align="center">二</th>
+        <th class="CalDayHeader" abbr="三" scope="col" align="center">三</th>
+        <th class="CalDayHeader" abbr="四" scope="col" align="center">四</th>
+        <th class="CalDayHeader" abbr="五" scope="col" align="center">五</th>
+        <th class="CalDayHeader" abbr="六" scope="col" align="center">六</th>
+    </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">31</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                        <td class="" align="center">
+                            2
+                        </td>
+                        <td class="" align="center">
+                            3
+                        </td>
+                        <td class="" align="center">
+                            4
+                        </td>
+                        <td class="" align="center">
+                            <a href="https://www.cnblogs.com/qiufeng2014/archive/2022/08/05.html"><u>5</u></a>
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        6
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            7
+                        </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                            <td class="" align="center">
+                                9
+                            </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                            <td class="CalTodayDay" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            13
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            14
+                        </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                            <td class="" align="center">
+                                16
+                            </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            20
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            21
+                        </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                            <td class="" align="center">
+                                23
+                            </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            27
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            28
+                        </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                            <td class="" align="center">
+                                30
+                            </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            3
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            4
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                7
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                8
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                9
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            10
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script>
+		<div id="sidebar_news" class="newsItem"><h3>公告</h3>
+<div class="News">
+	
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/qiufeng2014/">
+            秋·风
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/qiufeng2014/" title="入园时间：2014-03-06">
+            8年5个月
+        </a>
+        <br>
+        粉丝：
+        <a class="follower-count" href="https://home.cnblogs.com/u/qiufeng2014/followers/">
+            22
+        </a>
+        <br>
+        关注：
+        <a class="folowing-count" href="https://home.cnblogs.com/u/qiufeng2014/followees/">
+            0
+        </a>
+        <div id="p_b_follow" class="follow-tip">
+<a href="javascript:void(0)" onclick="follow('72916a22-d7a4-e311-8d02-90b11c0b17d6')">+加关注</a></div>
+        <script>getFollowStatus('72916a22-d7a4-e311-8d02-90b11c0b17d6');</script>
+    </div>
+</div>
+</div>
+
+</div>
+<div id="sidebar_c3"></div>
+		<div id="blog-sidecolumn"><!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+    <li><a href="https://www.cnblogs.com/qiufeng2014/p/" title="我的博客的随笔列表">我的随笔</a></li>
+<li><a href="https://www.cnblogs.com/qiufeng2014/MyComments.html" title="我的发表过的评论列表">我的评论</a></li>
+<li><a href="https://www.cnblogs.com/qiufeng2014/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li>
+<li><a href="https://www.cnblogs.com/qiufeng2014/comments" title="我的博客的评论列表">最新评论</a></li>
+<li><a href="https://www.cnblogs.com/qiufeng2014/tag/" title="我的博客的标签列表">我的标签</a></li>
+
+</ul>
+</div>
+
+<!-- 最新随笔 -->
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block"></div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+
+    <h3>
+        
+    <a class="sidebar-card-title-a" href="https://www.cnblogs.com/qiufeng2014/categories">随笔分类</a>
+
+
+
+    </h3>
+    <ul>
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/category/2088230.html" class="category-item-link" rel="" target="">Android(5)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/category/667700.html" class="category-item-link" rel="" target="">Arduino(2)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/category/667698.html" class="category-item-link" rel="" target="">delphi(25)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/category/2064434.html" class="category-item-link" rel="" target="">Lazarus(51)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/category/2086436.html" class="category-item-link" rel="" target="">linux(28)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/category/667699.html" class="category-item-link" rel="" target="">Raspberry Pi(11)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/category/1006517.html" class="category-item-link" rel="" target="">unigui(12)</a>
+ 
+            </li>            
+        
+    </ul>
+    <h3>
+        
+随笔档案
+
+
+    </h3>
+    <ul>
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2022/08.html" class="category-item-link" rel="" target="">2022年8月(3)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2022/07.html" class="category-item-link" rel="" target="">2022年7月(10)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2022/06.html" class="category-item-link" rel="" target="">2022年6月(6)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2022/05.html" class="category-item-link" rel="" target="">2022年5月(7)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2022/04.html" class="category-item-link" rel="" target="">2022年4月(7)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2022/03.html" class="category-item-link" rel="" target="">2022年3月(2)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2022/02.html" class="category-item-link" rel="" target="">2022年2月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2022/01.html" class="category-item-link" rel="" target="">2022年1月(3)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2021/12.html" class="category-item-link" rel="" target="">2021年12月(12)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2021/11.html" class="category-item-link" rel="" target="">2021年11月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2021/10.html" class="category-item-link" rel="" target="">2021年10月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2021/05.html" class="category-item-link" rel="" target="">2021年5月(3)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2020/12.html" class="category-item-link" rel="" target="">2020年12月(3)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2020/11.html" class="category-item-link" rel="" target="">2020年11月(3)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="true" style="display: block">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2020/10.html" class="category-item-link" rel="" target="">2020年10月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2020/03.html" class="category-item-link" rel="" target="">2020年3月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2020/01.html" class="category-item-link" rel="" target="">2020年1月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2018/06.html" class="category-item-link" rel="" target="">2018年6月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2017/05.html" class="category-item-link" rel="" target="">2017年5月(4)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2017/03.html" class="category-item-link" rel="" target="">2017年3月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2015/09.html" class="category-item-link" rel="" target="">2015年9月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2015/03.html" class="category-item-link" rel="" target="">2015年3月(3)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2015/02.html" class="category-item-link" rel="" target="">2015年2月(3)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2014/11.html" class="category-item-link" rel="" target="">2014年11月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2014/09.html" class="category-item-link" rel="" target="">2014年9月(2)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2014/07.html" class="category-item-link" rel="" target="">2014年7月(2)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2014/06.html" class="category-item-link" rel="" target="">2014年6月(1)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2014/05.html" class="category-item-link" rel="" target="">2014年5月(6)</a>
+ 
+            </li>            
+            <li data-category-list-item-visible="false" style="display: none">
+                
+<a href="https://www.cnblogs.com/qiufeng2014/archive/2014/04.html" class="category-item-link" rel="" target="">2014年4月(2)</a>
+ 
+            </li>            
+        <li><a href="javascript:void(0)" onclick="sideColumnManager.loadMore(this)">更多</a></li>
+    </ul>
+</div>
+
+<!-- 最新评论 -->
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+<div id="topview_posts_wrap">
+    <h3 class="catListTitle">
+        <a href="https://www.cnblogs.com/qiufeng2014/most-viewed" class="sidebar-card-title-a">
+    阅读排行榜
+</a>
+
+    </h3>
+    <div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/4281761.html">
+                            1. Delphi xe7 FireMonkey / Mobile (Android, iOS)生成 QR Code完整实例(4499)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/4351896.html">
+                            2. Mac OS X Yosemite &amp; Arduino安装CH340 USB转串口驱动(3108)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/3817681.html">
+                            3. delphi xe6 for android 自带控件LocationSensor优先使用GPS定位的方法(2333)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/3706133.html">
+                            4. [转]delphi xe6  android屏幕操持常亮(2303)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/3705253.html">
+                            5. delphi xe6 android ListView增加 Header或Footer 的方法(2238)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div></div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+    <h3 class="catListTitle">
+        <a href="https://www.cnblogs.com/qiufeng2014/most-commented" class="sidebar-card-title-a">评论排行榜</a>
+
+    </h3>
+    <div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/15722762.html">
+                            1. 尝试解决linux下Lazarus 2.2.0版代码编辑器和SynEdit不支持中文输入的Bug(8)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/4281761.html">
+                            2. Delphi xe7 FireMonkey / Mobile (Android, iOS)生成 QR Code完整实例(7)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/4809144.html">
+                            3. delphi android 录像(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/16128813.html">
+                            4. lazarus 使用技巧2(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/qiufeng2014/p/16062846.html">
+                            5. 增强Lazreport控件功能及修正Bug(2022.05.20更新)(1)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div></div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">
+            <a href="https://www.cnblogs.com/qiufeng2014/most-liked" class="sidebar-card-title-a">推荐排行榜</a>
+
+        </h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/qiufeng2014/p/15722762.html">
+                                1. 尝试解决linux下Lazarus 2.2.0版代码编辑器和SynEdit不支持中文输入的Bug(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/qiufeng2014/p/4281761.html">
+                                2. Delphi xe7 FireMonkey / Mobile (Android, iOS)生成 QR Code完整实例(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/qiufeng2014/p/16381961.html">
+                                3. lazarus 2.2.2 for linux aarch64/linux x86_64(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/qiufeng2014/p/16062846.html">
+                                4. 增强Lazreport控件功能及修正Bug(2022.05.20更新)(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/qiufeng2014/p/15756328.html">
+                                5. lazarus LAMW开发安卓APP时，GUI如何布局？(1)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div></div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap" class="RecentComment">
+    <h3 class="catListTitle"><a href="https://www.cnblogs.com/qiufeng2014/comments" class="sidebar-card-title-a">最新评论</a></h3>    
+    <div class="RecentCommentBlock">
+        <ul>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qiufeng2014/p/16128813.html">1. Re:lazarus 使用技巧2</a></li>
+                <li class="recent_comment_body"><p>学到</p>
+</li>
+                <li class="recent_comment_author">--OneTouch</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qiufeng2014/p/16062846.html">2. Re:增强Lazreport控件功能及修正Bug</a></li>
+                <li class="recent_comment_body"><p>好东西，收藏</p>
+</li>
+                <li class="recent_comment_author">--OneTouch</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qiufeng2014/p/15722762.html">3. Re:尝试解决linux下Lazarus 2.2.0版代码编辑器不支持中文输入的Bug</a></li>
+                <li class="recent_comment_body">@秋·风 @okpp 我也发现用系统自带的输入有这个问题，安装别的输入法能正常输入词组。你用这个输入法试试：...... 试了一下，发现也是只能输入一个汉字。...</li>
+                <li class="recent_comment_author">--okpp</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qiufeng2014/p/15722762.html">4. Re:尝试解决linux下Lazarus 2.2.0版代码编辑器不支持中文输入的Bug</a></li>
+                <li class="recent_comment_body"><p>@okpp 我也发现用系统自带的输入有这个问题，安装别的输入法能正常输入词组。你用这个输入法试试：<a href="" target="_blank"></a></p>
+</li>
+                <li class="recent_comment_author">--秋·风</li>
+                <li class="recent_comment_title"><a href="https://www.cnblogs.com/qiufeng2014/p/15722762.html">5. Re:尝试解决linux下Lazarus 2.2.0版代码编辑器不支持中文输入的Bug</a></li>
+                <li class="recent_comment_body"><p>请问博主，我用的是Deepin20，修改了5个文件之后，不论使用何种输入法，中文词组均只能输入第一个汉字，请问有什么办法没有？</p>
+</li>
+                <li class="recent_comment_author">--okpp</li>
+        </ul>
+    </div>
+</div></div>
+
+
+</div>
+                    <script>loadBlogSideColumn();</script>
+	
+</div>
+<div id="main">
+	<div id="post_detail">
+<div class="post">
+	<div class="postTitle">
+		
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/qiufeng2014/p/15722762.html">
+    <span role="heading" aria-level="2">尝试解决linux下Lazarus 2.2.0版代码编辑器和SynEdit不支持中文输入的Bug</span>
+    
+</a>
+
+	</div>
+	
+	<div class="postText">
+		<div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p>&nbsp; &nbsp; &nbsp; &nbsp; linux下Lazarus 2.2.0 GTK2版代码编辑器及SynEdit控件不支持中文输入（<span style="color: rgba(255, 0, 0, 1)">Lazarus for Linux QT版支持中文输入，但发现我常用的控件不支持QT版，控件兼容性还是GTK2版比QT版好</span>），
+长期困扰着使用中文的开发者，需然网上已有解决方案，但并不是最佳的解决办法，跟踪源码后发现，只需将这5个文件按下面的方法添加{$define 
+WITH_GTK2_IM}和{$define Gtk2IME}就能完美修复不支持中文输入的bug，修改后需重新编译lazarus。<br>&nbsp; &nbsp; &nbsp; &nbsp;重新编译后的lazarus和SynEdit控件在linux已能正常输入中文，<span style="color: rgba(255, 0, 0, 1)">这是官方隐藏的方法，说明官方在处理linux等非windows系统不能输入中文的问题，可能还没完善，从CudaText的代码分析，估计Lazarus 2.3会支持中文输入</span>。<br><span style="color: rgba(255, 0, 0, 1)">存在的问题：<br>&nbsp; &nbsp; &nbsp; 在Linux(银河麒麟)使用如搜狗输入法等输入词组时只有<span style="text-decoration: underline">第一个字</span>能输入，后面的全被丢了</span>，建议安装“fcitx-table-wbpy”输入法，这个输入法在银河麒麟和树莓派OS 64测试多字词组输入正常。<br>“fcitx-table-wbpy”输入法安装方法(在终端用执行)：</p>
+<div class="cnblogs_code">
+<pre>sudo apt-get install fcitx-table-wbpy</pre>
+</div>
+<p><span>适用lazarus版本：lazarus </span><span style="color: rgba(255, 0, 0, 1)">2.2.0&nbsp; &nbsp;<span style="color: rgba(0, 0, 0, 1)">FPC</span> 3.2.2</span></p>
+<p><span>适用平台：x86和ARM 64 linux <span>【银河麒麟(CPU为麒麟990)和树莓派 OS 64】<br></span></span><em id="__mceDel"><span><span>不适用平台：其他CPU的Linux未测试</span></span></em></p>
+<p><span style="font-size: 14px">修改方法很简单，这4个文件，添加：</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 128, 0, 1)">{$ifdef linux}<br></span><span style="color: rgba(0, 128, 0, 1)">{</span><span style="color: rgba(0, 128, 0, 1)">$define WITH_GTK2_IM</span><span style="color: rgba(0, 128, 0, 1)">}<br>{$endif}</span></pre>
+</div>
+<p>lazarus/components/synedit/lazsyngtk2imm.pas</p>
+<p>lazarus/lcl/interfaces/gtk2/gtk2globals.pp</p>
+<p>lazarus/lcl/interfaces/gtk2/gtk2widgetset.inc</p>
+<p>lazarus/lcl/interfaces/gtk2/gtk2proc.inc</p>
+<p>再修改：</p>
+<p>lazarus/components/synedit/synedit.inc添加</p>
+<div class="cnblogs_code">
+<pre><span style="color: rgba(0, 128, 0, 1)">{$ifdef linux}<br>{</span><span style="color: rgba(0, 128, 0, 1)">$define Gtk2IME</span><span style="color: rgba(0, 128, 0, 1)">}<br>{$endif}</span></pre>
+</div>
+<p>修改完成后重新编译lazarus。</p>
+<p><img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/610212-20211223153020690-1996927303.png" alt="" loading="lazy" class="medium-zoom-image" width="566" height="195"></p>
+<p>&nbsp;&nbsp;<img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/610212-20211223153707997-812649775.png" alt="" loading="lazy" class="medium-zoom-image" width="600" height="341"></p>
+<p>&nbsp;&nbsp;<img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/610212-20211223153746964-418518340.png" alt="" loading="lazy" class="medium-zoom-image" width="523" height="263"></p>
+<p>&nbsp;&nbsp;<img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/610212-20211223153817961-768814960.png" alt="" loading="lazy" width="554" height="212"></p>
+<p>&nbsp;&nbsp;<img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/610212-20211223153846587-1627456459.png" alt="" loading="lazy" width="504" height="299"></p>
+<p><img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/610212-20211223163936962-1584168794.png" alt="" loading="lazy"></p>
+<p>树莓派中文输入：</p>
+<p><img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/610212-20211223202111697-1919443706.png" alt="" loading="lazy" width="904" height="514"></p>
+<p>银河麒麟中文输入：</p>
+<p><img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/610212-20211224093638809-1268025050.png" alt="" loading="lazy" width="921" height="614"></p>
+<p id="1640309797801">&nbsp;</p>
+</div>
+<div class="clear"></div>
+<div id="blog_post_info_block" role="contentinfo"><div id="BlogPostCategory">
+    分类: 
+            <a href="https://www.cnblogs.com/qiufeng2014/category/667699.html" target="_blank">Raspberry Pi</a>,             <a href="https://www.cnblogs.com/qiufeng2014/category/2064434.html" target="_blank">Lazarus</a>,             <a href="https://www.cnblogs.com/qiufeng2014/category/2086436.html" target="_blank">linux</a></div>
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(15722762,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow('72916a22-d7a4-e311-8d02-90b11c0b17d6');" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/qiufeng2014/" target="_blank"><img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/qiufeng2014/">秋·风</a><br>
+            <a href="https://home.cnblogs.com/u/qiufeng2014/followers/">粉丝 - <span class="follower-count">22</span></a>
+            <a href="https://home.cnblogs.com/u/qiufeng2014/followees/">关注 - <span class="following-count">0</span></a><br>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow" class="follow-tip">
+                <a href="javascript:void(0);" onclick="follow('72916a22-d7a4-e311-8d02-90b11c0b17d6');return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(15722762,'Digg')">
+        <span class="diggnum" id="digg_count">2</span>
+    </div>
+    <div class="buryit" onclick="votePost(15722762,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/qiufeng2014/p/15713973.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/qiufeng2014/p/15713973.html" data-featured-image="" title="发布于 2021-12-21 09:42">Lazarus升级并保留原控件的方法</a>
+    <br>
+    <a href="https://www.cnblogs.com/qiufeng2014/p/15733839.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/qiufeng2014/p/15733839.html" data-featured-image="" title="发布于 2021-12-26 19:53">lazarus使用技巧(2022.04.20修正)</a>
+
+</div>
+</div>
+	</div>
+	
+	<div class="postfoot">
+		posted on 
+<span id="post-date">2021-12-23 11:38</span>&nbsp;
+<a href="https://www.cnblogs.com/qiufeng2014/">秋·风</a>&nbsp;
+阅读(<span id="post_view_count">540</span>)&nbsp;
+评论(<span id="post_comment_count">8</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=15722762" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(15722762);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: '', targetType: 'blogPost', targetId: '15722762', targetLink: 'https://www.cnblogs.com/qiufeng2014/p/15722762.html', title: '尝试解决linux下Lazarus 2.2.0版代码编辑器和SynEdit不支持中文输入的Bug' })">举报</a>
+	</div>
+</div>
+
+
+
+<script>
+    var cb_entryId = 15722762, cb_entryCreatedDate = '2021-12-23 11:38', cb_postType = 1, cb_postTitle = '尝试解决linux下Lazarus 2.2.0版代码编辑器和SynEdit不支持中文输入的Bug';
+    var allowComments = true, cb_blogId = 184359, cb_blogApp = 'qiufeng2014', cb_blogUserGuid = '72916a22-d7a4-e311-8d02-90b11c0b17d6';
+    mermaidRender.render()
+    markdown_highlight()
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+    updatePostStats(
+            [cb_entryId],
+            function(id, count) { $("#post_view_count").text(count) },
+            function(id, count) { $("#post_comment_count").text(count) })
+</script>
+<a id="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container" style="visibility: visible;"><div class="login_tips">
+    登录后才能查看或发表评论，立即 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return account.login('!comments');">登录</a> 或者
+    <a href="https://www.cnblogs.com/">逛逛</a> 博客园首页
+</div>
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+        <div id="cnblogs_ch"><a href="https://www.zego.im/activity/cnblogs1" target="_blank" rel="nofollow" onclick="countCreativeClicks('CH-ZEGO');countCreativeClicks('ZEGO-term-')" data-impression="CH-ZEGO;ZEGO-term-">【社区专享】0成本搭建支持连麦、虚拟人、即时通信的直播间</a></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+            <a href="https://www.zego.im/activity/cnblogs1" rel="nofollow" target="_blank" onclick="countCreativeClicks('C1-ZEGO');countCreativeClicks('ZEGO-term-')">
+                <img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/35695-20220717184530903-438456477.jpg" onload="countCreativeImpressions('C1-ZEGO');countCreativeImpressions('ZEGO-term-')" alt="">
+                
+            </a>
+    </div>
+    <div id="under_post_card1"><div class="under-post-card">
+<b>编辑推荐：</b>
+<br>
+
+· <a href="https://www.cnblogs.com/wucy/p/16566495.html" target="_blank">解决 ASP.NET Core 在 Task 中使用 IServiceProvider 的问题</a>
+    <br>
+· <a href="https://www.cnblogs.com/coco1s/p/16561206.html" target="_blank">使用 CSS 构建强大且酷炫的粒子动画</a>
+    <br>
+· <a href="https://www.cnblogs.com/lesliexin/p/16554752.html" target="_blank">[C#]GDI+之鼠标交互：原理、示例、一步步深入、性能优化</a>
+    <br>
+· <a href="https://www.cnblogs.com/chanshuyi/p/head-first-of-cdn.html" target="_blank">一文带你弄懂 CDN 技术的原理</a>
+    <br>
+· <a href="https://www.cnblogs.com/coco1s/p/16549752.html" target="_blank">妙用 CSS 构建花式透视背景效果</a>
+    <br>
+</div></div>
+        <div id="cnblogs_c2" class="under-post-card">
+            <a href="http://www.grqsh.com/zcloud.html" rel="nofollow" target="_blank" onclick="countCreativeClicks('C2-格瑞趋势-SQL专家云');countCreativeClicks('格瑞趋势-SQL专家云-term-')">
+                <img src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/35695-20220808183239921-1095997467.jpg" alt="" onload="countCreativeImpressions('C2-格瑞趋势-SQL专家云');countCreativeImpressions('格瑞趋势-SQL专家云-term-')">
+            </a>
+        </div>
+    <div id="under_post_card2"><div class="itnews under-post-card">
+    <b>最新新闻</b>：
+    <br>
+ ·          <a href="https://news.cnblogs.com/n/726305/" target="_blank">东芝第一财季营业亏损48亿日元，为两年来首次季度亏损</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/726304/" target="_blank">谷歌光纤计划在美国5个州扩张，为2015年以来首次大举扩张</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/726303/" target="_blank">100亿的并购，解决不了字节的创新焦虑</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/726302/" target="_blank">评估机器人账户员工名单未提供，马斯克指控推特隐藏关键证人</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/726301/" target="_blank">亚马逊在加州全食超市大规模推广“挥手付”</a>
+        <br>
+    » <a href="https://news.cnblogs.com/" title="IT 新闻" target="_blank">更多新闻...</a>
+</div></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+        var commentManager = new blogCommentManager();
+        commentManager.renderComments(0);
+        fixPostBody();
+
+            window.tocManager.displayDisableTocTips = false;
+            window.tocManager.generateToc();
+            
+                setTimeout(function() { countViews(cb_blogId, cb_entryId); }, 50);
+            
+            deliverT2();
+            deliverC1C2();
+            loadNewsAndKb();
+            
+                LoadPostCategoriesTags(cb_blogId, cb_entryId);
+            
+            LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+            GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+            loadOptUnderPost();
+            GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+                </script>
+</div>
+
+</div>
+
+
+</div>
+<div class="footer">
+<p id="footer">
+	Powered by: 
+	<br>
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br>
+	Copyright © 2022 秋·风
+<br><span id="poweredby">Powered by .NET 6 on Kubernetes</span>
+
+</p>
+
+
+</div>
+
+
+
+
+
+<input type="hidden" id="antiforgery_token" value="CfDJ8EOBBtWq0dNFoDS-ZHPSe50-kK5nSyKL7XLoa5nvlV5QHBVvpSHXVTSVcY5Cxlnwtb3t0Yx883tVUrLn-hHuoBoPY7idt0GjHhAFviioSlVVkwZrF7hSPFNhYkHOHLvxIjH3UVrl7GVCQNIu-636-Hw">
+<script async="" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/js"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var kv = getGACustom();
+    if (kv) {
+        gtag('set', kv);
+    }
+    gtag('config', 'UA-476124-1');
+</script>
+<script defer="defer" src="%E5%B0%9D%E8%AF%95%E8%A7%A3%E5%86%B3%E7%BC%96%E8%BE%91%E5%99%A8SynEdit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E7%9A%84Bug_files/hm.js"></script>
+
+</body></html>
