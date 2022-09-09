@@ -1,0 +1,7 @@
+找到第852行
+
+852                 </Scintillas>
+
+改成：
+
+852                 </MarginsBorderEdge>
