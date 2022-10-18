@@ -16,20 +16,27 @@
           <ahaLineNumber Foreground="clWhite"/>
           <ahaGutterSeparator Background="clBlack"/>
         </SchemeTwilight>
+        <SchemeColors>
+          <ahaOutlineLevel10Color Foreground="16737792" MarkupFoldLineColor="16737792"/>
+          <ahaOutlineLevel7Color Foreground="33023" MarkupFoldLineColor="33023"/>
+          <ahaOutlineLevel8Color Foreground="12615808" MarkupFoldLineColor="12615808"/>
+          <ahaOutlineLevel9Color Foreground="13421568" MarkupFoldLineColor="13421568"/>
+        </SchemeColors>
       </Globals>
     </Color>
-    <Display EditorFontSize="11" DoNotWarnForFont="Consolas" EditorFont="Consolas" ExtraLineSpacing="0"/>
+    <Display EditorFontSize="12" DoNotWarnForFont="Consolas" EditorFont="Consolas" ExtraLineSpacing="0"/>
     <KeyMapping>
       <default Count="1">
         <Version Value="6"/>
         <printselection Value="80,1,0,0,0,0,0,0"/>
         <Item1 Name="Identifier completion">
           <KeyB Default="False" Key1="74" Shift1="4"/>
+          <KeyA Default="False" Key1="32" Shift1="1"/>
         </Item1>
       </default>
     </KeyMapping>
     <General>
-      <Editor ShowTabCloseButtons="False" ScrollPastEof="True" TabWidth="2"/>
+      <Editor ShowTabCloseButtons="False" ScrollPastEof="True" TabWidth="2" SmartTabs="False"/>
     </General>
     <Misc TabFontSize="10" PasExtendedKeywordsMode="True">
       <ScrollOnEditLeftOptions KeepBorderDistance="2" KeepBorderDistancePercent="0" ScrollExtraColumns="5" ScrollExtraPercent="20" ScrollExtraMax="10"/>
