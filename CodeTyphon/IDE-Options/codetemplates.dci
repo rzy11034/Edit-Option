@@ -327,3 +327,13 @@ $param(name) = record
   |
 end$AddSemicolon()
 
+[MSU | ModeSwitch unicodestrings]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+{$ModeSwitch unicodestrings}
+[MSR | ModeSwitch advancedrecords]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+{$ModeSwitch advancedrecords}
