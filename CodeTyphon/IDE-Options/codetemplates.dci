@@ -331,7 +331,7 @@ end$AddSemicolon()
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
-{$ModeSwitch unicodestrings}
+{$ModeSwitch unicodestrings}{$J-}
 [MSR | ModeSwitch advancedrecords]
 $(AttributesStart)
 EnableMakros=true
