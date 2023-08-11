@@ -2,15 +2,16 @@
 <CONFIG>
   <CodeToolsOptions>
     <Version Value="2"/>
+    <JumpToMethodBody Value="True"/>
     <LineLengthXMLConfig Value="150"/>
     <ClassHeaderComments Value="False"/>
     <MethodInsertPolicy Value="Alphabetically"/>
-    <PropertyReadIdentPrefix Value="__Get"/>
-    <PropertyWriteIdentPrefix Value="__Set"/>
+    <PropertyReadIdentPrefix Value="__get"/>
+    <PropertyWriteIdentPrefix Value="__set"/>
     <PrivateVariablePrefix Value="_"/>
-    <SetPropertyVariablename Value="new"/>
-    <SetPropertyVariableIsPrefix Value="True"/>
+    <SetPropertyVariablename Value="value"/>
     <SetPropertyVariableUseConst Value="True"/>
     <IdentifierCompletion AddSemicolon="False" AddAssignOperator="False" AddDo="False" AutoAddParameterBrackets="False" ShowHelp="True"/>
+    <Indentation FileName="C:\Users\surface\AppData\Roaming\typhon64\ide_indentation.pas"/>
   </CodeToolsOptions>
 </CONFIG>
