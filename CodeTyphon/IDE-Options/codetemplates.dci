@@ -337,3 +337,5 @@ $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
 {$ModeSwitch advancedrecords}
+[separator | //***********************************************************************]
+//***********************************************************************
