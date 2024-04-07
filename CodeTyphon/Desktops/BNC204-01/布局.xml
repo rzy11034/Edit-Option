@@ -1182,23 +1182,22 @@
     </Desktop4>
     <Desktop5 Name="Editing" DockMaster="TIDEGlassDockMaster">
       <Desktop Version="2" FormIdCount="49">
-        <FormIdList a1="MainIDE" a2="MessagesView" a3="SourceNotebook" a4="CodeExplorerView" a5="ProjectInspector" a6="SearchResults" a7="Assembler" a8="CodeOceanForm" a9="PackageEditor_pl_OpenGLADV" a10="PackageEditor_pl_OpenGLES" a11="PackageEditor_pl_OpenGL" a12="PackageEditor_pl_OpenCV" a13="PackageEditor_pl_GLFW" a14="PackageEditor_pl_Vulkan" a15="ObjectInspectorDlg" a16="ComponentListForm" a17="CodeBrowser" a18="Watches" a19="BreakPoints" a20="CallStack" a21="DbgEvents" a22="DbgOutput" a23="PseudoTerminal" a24="FileBrowser" a25="PkgGraphExplorer" a26="Locals" a27="EvaluateModify" a28="Registers" a29="Inspect" a30="Threads" a31="DbgHistory" a32="UnitDependencies" a33="FPDocEditor" a34="ClipBrdHistory" a35="EditorFileManager" a36="AnchorEditor" a37="TabOrderEditor" a38="IssueBrowser" a39="JumpHistory" a40="ComponentList" a41="AdvanceFindForm" a42="PackageEditor_DeepStar_Lib" a43="MultiProjectEditor" a44="MacroListView" a45="IDETodoWindow" a46="PackageEditor_ds_SDL_IDE" a47="PackageEditor_pl_SDL" a48="CodyFindOverloadsWindow" a49="MacroListViewer"/>
+        <FormIdList a1="MainIDE" a2="SourceNotebook" a3="MessagesView" a4="CodeExplorerView" a5="ProjectInspector" a6="SearchResults" a7="Assembler" a8="CodeOceanForm" a9="PackageEditor_pl_OpenGLADV" a10="PackageEditor_pl_OpenGLES" a11="PackageEditor_pl_OpenGL" a12="PackageEditor_pl_OpenCV" a13="PackageEditor_pl_GLFW" a14="PackageEditor_pl_Vulkan" a15="ObjectInspectorDlg" a16="ComponentListForm" a17="CodeBrowser" a18="Watches" a19="BreakPoints" a20="CallStack" a21="DbgEvents" a22="DbgOutput" a23="PseudoTerminal" a24="FileBrowser" a25="PkgGraphExplorer" a26="Locals" a27="EvaluateModify" a28="Registers" a29="Inspect" a30="Threads" a31="DbgHistory" a32="UnitDependencies" a33="FPDocEditor" a34="ClipBrdHistory" a35="EditorFileManager" a36="AnchorEditor" a37="TabOrderEditor" a38="IssueBrowser" a39="JumpHistory" a40="ComponentList" a41="AdvanceFindForm" a42="PackageEditor_DeepStar_Lib" a43="MultiProjectEditor" a44="MacroListView" a45="IDETodoWindow" a46="PackageEditor_ds_SDL_IDE" a47="PackageEditor_pl_SDL" a48="CodyFindOverloadsWindow" a49="MacroListViewer"/>
       </Desktop>
       <MainIDE>
         <Caption Value="MainIDE"/>
         <CustomPosition Left="-8" Width="1919" Height="93"/>
         <Visible Value="True"/>
       </MainIDE>
-      <MessagesView>
-        <Caption Value="MessagesView"/>
-        <CustomPosition Left="514" Top="749" Width="1407" Height="290"/>
-        <Visible Value="True"/>
-      </MessagesView>
       <SourceNotebook>
         <Caption Value="SourceNotebook"/>
         <CustomPosition Left="513" Top="112" Width="1408" Height="928"/>
         <Visible Value="True"/>
       </SourceNotebook>
+      <MessagesView>
+        <Caption Value="MessagesView"/>
+        <CustomPosition Left="514" Top="749" Width="1407" Height="290"/>
+      </MessagesView>
       <CodeExplorerView>
         <Caption Value="CodeExplorerView"/>
         <CustomPosition Left="1" Top="112" Width="511" Height="929"/>
@@ -1481,10 +1480,10 @@
           <Button27 Name="View Forms"/>
           <Button28 Name="Toggle between Unit and Form"/>
           <Button29 Name="---------------"/>
-          <Button30 Name="Procedure List ..."/>
-          <Button31 Name="Find text"/>
-          <Button32 Name="Replace text"/>
-          <Button33 Name="Add unit to uses section"/>
+          <Button30 Name="Add unit to uses section"/>
+          <Button31 Name="Procedure List ..."/>
+          <Button32 Name="Find text"/>
+          <Button33 Name="Replace text"/>
           <Button34 Name="---------------"/>
           <Button35 Name="Open package file"/>
           <Button36 Name="Open package file from List"/>
