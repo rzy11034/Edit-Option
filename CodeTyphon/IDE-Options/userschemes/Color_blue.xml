@@ -31,16 +31,16 @@
           <ahaLineNumber Foreground="clSkyBlue"/>
           <ahaModifiedLine Foreground="clGreen" FrameColor="59900"/>
           <ahaMouseLink Foreground="clAqua" FrameColor="clAqua" FrameEdges="sfeBottom" BackPriority="2500" ForePriority="1500" FramePriority="7500"/>
-          <ahaOutlineLevel10Color Foreground="16737792" FrameColor="16737792"/>
-          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clMaroon"/>
-          <ahaOutlineLevel2Color Foreground="33023" MarkupFoldLineColor="33023"/>
-          <ahaOutlineLevel3Color Foreground="12615808" MarkupFoldLineColor="12615808"/>
-          <ahaOutlineLevel4Color Foreground="13421568" MarkupFoldLineColor="13421568"/>
-          <ahaOutlineLevel5Color Foreground="16737792" MarkupFoldLineColor="16737792"/>
-          <ahaOutlineLevel6Color Foreground="13369548" MarkupFoldLineColor="13369548"/>
-          <ahaOutlineLevel7Color Foreground="33023" MarkupFoldLineColor="33023"/>
-          <ahaOutlineLevel8Color Foreground="12615808" MarkupFoldLineColor="12615808"/>
-          <ahaOutlineLevel9Color Foreground="13421568" MarkupFoldLineColor="13421568"/>
+          <ahaOutlineLevel10Color Foreground="16737792" FrameColor="16737792" MarkupFoldLineColor="16737792" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel1Color Foreground="15117312" MarkupFoldLineColor="15117312" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel2Color Foreground="33023" MarkupFoldLineColor="33023" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel3Color Foreground="12615808" MarkupFoldLineColor="12615808" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel4Color Foreground="13421568" MarkupFoldLineColor="13421568" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel5Color Foreground="16737792" MarkupFoldLineColor="16737792" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel6Color Foreground="13369548" MarkupFoldLineColor="13369548" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel7Color Foreground="33023" MarkupFoldLineColor="33023" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel8Color Foreground="12615808" MarkupFoldLineColor="12615808" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel9Color Foreground="13421568" MarkupFoldLineColor="13421568" MarkupFoldLineStyle="slsDotted"/>
           <ahaOverviewGutter Background="15263976" Foreground="13948116" FrameColor="clSilver"/>
           <ahaRightMargin Foreground="6573357"/>
           <ahaSpecialVisibleChars BackPriority="8100" ForePriority="8100" FramePriority="8100"/>
@@ -76,16 +76,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone"/>
-          <ahaOutlineLevel1Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
+          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>
@@ -122,16 +122,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone"/>
-          <ahaOutlineLevel1Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
+          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>
@@ -198,16 +198,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone"/>
-          <ahaOutlineLevel1Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
+          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>
@@ -247,16 +247,16 @@
           <ahaLineNumber Foreground="clNone"/>
           <ahaModifiedLine Foreground="clNone" FrameColor="clNone"/>
           <ahaMouseLink Foreground="clNone" FrameColor="clNone" FrameEdges="sfeAround" BackPriority="0" ForePriority="0" FramePriority="0"/>
-          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone"/>
-          <ahaOutlineLevel1Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel2Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel3Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel4Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel5Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel6Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
+          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
           <ahaOverviewGutter Background="clNone" Foreground="clNone" FrameColor="clNone"/>
           <ahaRightMargin Foreground="clNone"/>
           <ahaSpecialVisibleChars BackPriority="0" ForePriority="0" FramePriority="0"/>
@@ -537,16 +537,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone"/>
-          <ahaOutlineLevel1Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
+          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>
@@ -577,16 +577,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone"/>
-          <ahaOutlineLevel1Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone"/>
+          <ahaOutlineLevel10Color Foreground="clNone" FrameColor="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>

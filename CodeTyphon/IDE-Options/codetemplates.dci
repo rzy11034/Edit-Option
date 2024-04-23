@@ -44,7 +44,7 @@ $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-$Param(ClassName) = class($Param(TObject))
+T$Param(ClassName) = class($Param(TObject))
 private
 
 public
@@ -57,7 +57,7 @@ $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-$Param(ClassName) = class($Param(TObject))
+T$Param(ClassName) = class($Param(TObject))
 |
 end;
 [classc | class declaration (with Create/Destroy overrides)]
@@ -65,7 +65,7 @@ $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-$Param(ClassName) = class($Param(TObject))
+T$Param(ClassName) = class($Param(TObject))
 private
 
 protected
@@ -319,11 +319,11 @@ EnableMakros=true
 IgnoreForSelection=true
 $(AttributesEnd)
 property $param(Name):$param(Type) read _$param(Name,sync=1) write _$param(Name,sync=1);|
-[record | record]
+[records | record]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
-$param(name) = record
+T$param(name) = record
   |
 end$AddSemicolon()
 
@@ -346,3 +346,17 @@ $(AttributesEnd)
 //═══════════════════════════════════════════════════════════════════════*)
 [sepl | //══════════════════════════════════════]
 //═════════════════════════════════════════════════════════════════════════
+[object | Object Type]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+P$param(objName) = ^T$param(objName,sync=1);
+T$Param(objName,sync=1) = object
+private
+
+public
+  constructor Init();
+  destructor Done;
+  |
+end;
+
