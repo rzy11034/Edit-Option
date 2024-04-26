@@ -34,7 +34,6 @@
           <ahaModifiedLine Foreground="clGreen" FrameColor="59900"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue" FrameEdges="sfeBottom" BackPriority="2500" ForePriority="1500" FramePriority="7500"/>
           <ahaOutlineLevel1Color Foreground="clPurple" MarkupFoldLineColor="clPurple" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel2Color MarkupFoldLineStyle="slsDotted"/>
           <ahaOverviewGutter Background="15263976" Foreground="13948116" FrameColor="clSilver"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSpecialVisibleChars BackPriority="8100" ForePriority="8100" FramePriority="8100"/>
@@ -71,7 +70,7 @@
           <ahaLineHighlight Background="clNone" BackAlpha="0"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159"/>
           <ahaOutlineLevel3Color Foreground="2280512"/>
           <ahaOutlineLevel4Color Foreground="13421568"/>
           <ahaOutlineLevel5Color Foreground="16738346"/>
@@ -107,7 +106,7 @@
           <ahaLineHighlight Background="clNone" BackAlpha="0"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159"/>
           <ahaOutlineLevel3Color Foreground="2280512"/>
           <ahaOutlineLevel4Color Foreground="13421568"/>
           <ahaOutlineLevel5Color Foreground="16738346"/>
@@ -173,7 +172,7 @@
           <ahaLineHighlight Background="clNone" BackAlpha="0"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159"/>
           <ahaOutlineLevel3Color Foreground="2280512"/>
           <ahaOutlineLevel4Color Foreground="13421568"/>
           <ahaOutlineLevel5Color Foreground="16738346"/>
@@ -217,7 +216,6 @@
           <ahaModifiedLine Foreground="clNone" FrameColor="clNone"/>
           <ahaMouseLink Foreground="clNone" FrameColor="clNone" FrameEdges="sfeAround" BackPriority="0" ForePriority="0" FramePriority="0"/>
           <ahaOutlineLevel1Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color MarkupFoldLineStyle="slsSolid"/>
           <ahaOverviewGutter Background="clNone" Foreground="clNone" FrameColor="clNone"/>
           <ahaRightMargin Foreground="clNone"/>
           <ahaSpecialVisibleChars BackPriority="0" ForePriority="0" FramePriority="0"/>
@@ -483,7 +481,7 @@
           <ahaLineHighlight Background="clNone" BackAlpha="0"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159"/>
           <ahaOutlineLevel3Color Foreground="2280512"/>
           <ahaOutlineLevel4Color Foreground="13421568"/>
           <ahaOutlineLevel5Color Foreground="16738346"/>
@@ -516,7 +514,7 @@
           <ahaLineHighlight Background="clNone" BackAlpha="0"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159"/>
           <ahaOutlineLevel3Color Foreground="2280512"/>
           <ahaOutlineLevel4Color Foreground="13421568"/>
           <ahaOutlineLevel5Color Foreground="16738346"/>
