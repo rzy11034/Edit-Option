@@ -3,10 +3,10 @@
   <Typhon>
     <ColorSchemes Version="13">
       <Names Count="1">
-        <Item1 Value="Color_blue"/>
+        <Item1 Value="Color_blue(NoLevel)"/>
       </Names>
       <Globals Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clBlack" Foreground="clWhite" FrameColor="clWhite" Style="fsBold" BackPriority="3000" ForePriority="3000" FramePriority="3000" BackAlpha="128" FrameAlpha="128"/>
           <ahaCodeFoldingTree Background="3480320" Foreground="6573357"/>
           <ahaDefault Background="2823424" Foreground="clSilver"/>
@@ -31,16 +31,16 @@
           <ahaLineNumber Foreground="clSkyBlue"/>
           <ahaModifiedLine Foreground="clGreen" FrameColor="59900"/>
           <ahaMouseLink Foreground="clAqua" FrameColor="clAqua" FrameEdges="sfeBottom" BackPriority="2500" ForePriority="1500" FramePriority="7500"/>
-          <ahaOutlineLevel10Color Foreground="14771712" MarkupFoldLineColor="14771712" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel1Color Foreground="clRed" ForeAlpha="255" MarkupFoldLineColor="clRed" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel2Color Foreground="32993" MarkupFoldLineColor="32993" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel3Color Foreground="12615808" MarkupFoldLineColor="12615808" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel4Color Foreground="13421568" MarkupFoldLineColor="13421568" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel5Color Foreground="14771712" MarkupFoldLineColor="13460992" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel6Color Foreground="13369548" MarkupFoldLineColor="13369548" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel7Color Foreground="32993" MarkupFoldLineColor="32993" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel8Color Foreground="12615808" MarkupFoldLineColor="12616065" MarkupFoldLineStyle="slsDotted"/>
-          <ahaOutlineLevel9Color Foreground="13421568" MarkupFoldLineColor="13421568" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel10Color MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel1Color MarkupFoldLineColor="15117312" MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel2Color MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel3Color MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel4Color MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel5Color MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel6Color MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel7Color MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel8Color MarkupFoldLineStyle="slsDotted"/>
+          <ahaOutlineLevel9Color MarkupFoldLineStyle="slsDotted"/>
           <ahaOverviewGutter Background="15263976" Foreground="13948116" FrameColor="clSilver"/>
           <ahaRightMargin Foreground="6573357"/>
           <ahaSpecialVisibleChars BackPriority="8100" ForePriority="8100" FramePriority="8100"/>
@@ -55,10 +55,10 @@
           <ahaTopInfoHint Background="clPurple" Foreground="clYellow" FrameColor="clOlive" FrameStyle="slsDashed" FrameEdges="sfeBottom" BackPriority="8500" ForePriority="8500" FramePriority="8500"/>
           <ahaUnknownBreakpoint Background="clMaroon" Foreground="clRed" BackPriority="500" ForePriority="500" FramePriority="500"/>
           <ahaWordGroup FrameColor="clRed" BackPriority="3000" ForePriority="3000" FramePriority="3000"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </Globals>
       <LangObjectPascal Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -76,16 +76,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel1Color ForeAlpha="0" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel10Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color Foreground="13421568" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>
@@ -102,10 +102,10 @@
           <Reserved_word Foreground="15117312"/>
           <String Foreground="clFuchsia"/>
           <Symbol Foreground="clLime"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangObjectPascal>
       <LangHTML_document Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -122,16 +122,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel1Color ForeAlpha="0" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel10Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color Foreground="13421568" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>
@@ -145,10 +145,10 @@
           <Symbol Foreground="clRed"/>
           <Unknown_word Foreground="clRed" Style="fsBold"/>
           <Value Foreground="16744448"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangHTML_document>
       <LangC__ Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -178,10 +178,10 @@
           <Space Foreground="clWindow"/>
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangC__>
       <LangXML_document Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -198,16 +198,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel1Color ForeAlpha="0" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel10Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color Foreground="13421568" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>
@@ -225,10 +225,10 @@
           <Processing_Instruction Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
           <Text Foreground="clBlack" Style="fsBold"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangXML_document>
       <LangLazarus_Form_definition Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" Style="" BackPriority="0" ForePriority="0" FramePriority="0" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clNone" Foreground="clNone"/>
           <ahaDefault Background="clNone" Foreground="clNone"/>
@@ -247,16 +247,16 @@
           <ahaLineNumber Foreground="clNone"/>
           <ahaModifiedLine Foreground="clNone" FrameColor="clNone"/>
           <ahaMouseLink Foreground="clNone" FrameColor="clNone" FrameEdges="sfeAround" BackPriority="0" ForePriority="0" FramePriority="0"/>
-          <ahaOutlineLevel10Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel1Color Foreground="clNone" ForeAlpha="0" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel3Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel4Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel5Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel6Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel10Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color MarkupFoldLineStyle="slsSolid"/>
           <ahaOverviewGutter Background="clNone" Foreground="clNone" FrameColor="clNone"/>
           <ahaRightMargin Foreground="clNone"/>
           <ahaSpecialVisibleChars BackPriority="0" ForePriority="0" FramePriority="0"/>
@@ -276,10 +276,10 @@
           <Number Foreground="clNavy"/>
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangLazarus_Form_definition>
       <LangPerl Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -309,10 +309,10 @@
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
           <Variable Style="fsBold"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangPerl>
       <LangJava Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -341,10 +341,10 @@
           <Space Foreground="clWindow"/>
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangJava>
       <LangUNIX_Shell_Script Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -372,10 +372,10 @@
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
           <Variable Foreground="clPurple"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangUNIX_Shell_Script>
       <LangPython Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -409,10 +409,10 @@
           <Symbol Foreground="clRed"/>
           <SyntaxError Foreground="clRed"/>
           <System_functions_and_variables Style="fsBold"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangPython>
       <LangPHP Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -439,10 +439,10 @@
           <Reserved_word Style="fsBold"/>
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangPHP>
       <LangSQL Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -475,10 +475,10 @@
           <SQL_Plus_command Style="fsBold"/>
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangSQL>
       <LangCascading_style_sheets Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" Style="" BackPriority="0" ForePriority="0" FramePriority="0" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clNone" Foreground="clNone"/>
           <ahaDefault Background="clNone" Foreground="clNone"/>
@@ -517,10 +517,10 @@
           <Selector Style="fsBold"/>
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangCascading_style_sheets>
       <LangJavascript Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -537,16 +537,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel1Color ForeAlpha="0" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel10Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color Foreground="13421568" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>
@@ -557,10 +557,10 @@
           <Reserved_word Style="fsBold"/>
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangJavascript>
       <LangDiff_File Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -577,16 +577,16 @@
           <ahaLineHighlight Background="clNone"/>
           <ahaLineNumber Foreground="clNone"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clBlue"/>
-          <ahaOutlineLevel10Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel1Color ForeAlpha="0" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel4Color MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel7Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel8Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
-          <ahaOutlineLevel9Color Foreground="clNone" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel10Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel1Color Foreground="clRed" MarkupFoldLineColor="clNone" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel2Color Foreground="39159" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel3Color Foreground="2280512" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel4Color Foreground="13421568" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel5Color Foreground="16738346" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel6Color Foreground="13566148" MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel7Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel8Color MarkupFoldLineStyle="slsSolid"/>
+          <ahaOutlineLevel9Color MarkupFoldLineStyle="slsSolid"/>
           <ahaRightMargin Foreground="clSilver"/>
           <ahaSyncroEditArea Background="clMoneyGreen" Foreground="clNone"/>
           <ahaTextBlock Background="clNavy" Foreground="clWhite"/>
@@ -602,10 +602,10 @@
           <Diff_Original_File Background="clRed" Style="fsBold"/>
           <Diff_Removed_Line Foreground="clRed"/>
           <Unknown_word Style="fsItalic"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangDiff_File>
       <LangMS_DOS_batch_language Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -631,10 +631,10 @@
           <Key Style="fsBold"/>
           <Number Foreground="clBlue"/>
           <Variable Foreground="clGreen"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangMS_DOS_batch_language>
       <LangINI_file Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -658,10 +658,10 @@
           <ahaUnknownBreakpoint Background="clRed" Foreground="clBlack"/>
           <Comment Foreground="clGreen" Style="fsItalic"/>
           <Section Style="fsBold"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangINI_file>
       <Langpo_language_files Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clWhite" Foreground="clSilver"/>
           <ahaDefault Background="clWhite" Foreground="clBlack"/>
@@ -689,10 +689,10 @@
           <Key Style="fsBold"/>
           <Previous_value Foreground="clOlive" Style="fsItalic"/>
           <String Foreground="clFuchsia"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </Langpo_language_files>
       <LangPike Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" Style="" BackPriority="0" ForePriority="0" FramePriority="0" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clNone" Foreground="clNone"/>
           <ahaDefault Background="clNone" Foreground="clNone"/>
@@ -731,10 +731,10 @@
           <Reserved_word Style="fsBold"/>
           <String Foreground="clBlue"/>
           <Symbol Foreground="clRed"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangPike>
       <LangPlain_Text Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" Style="" BackPriority="0" ForePriority="0" FramePriority="0" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clNone" Foreground="clNone"/>
           <ahaDefault Background="clNone" Foreground="clNone"/>
@@ -767,10 +767,10 @@
           <ahaTopInfoHint Background="clNone" Foreground="clNone" FrameColor="clNone" FrameStyle="slsSolid" FrameEdges="sfeAround" BackPriority="0" ForePriority="0" FramePriority="0"/>
           <ahaUnknownBreakpoint Background="clNone" Foreground="clNone" BackPriority="0" ForePriority="0" FramePriority="0"/>
           <ahaWordGroup FrameColor="clNone" BackPriority="0" ForePriority="0" FramePriority="0"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangPlain_Text>
       <LangDisassembler_Window Version="13">
-        <SchemeColor_blue>
+        <SchemeColor_blue_NoLevel_>
           <ahaAsmLinkTarget Foreground="clHotLight"/>
           <ahaAsmSourceFunc Style="fsBold"/>
           <ahaAsmSourceLine Style="fsBold"/>
@@ -778,7 +778,7 @@
           <ahaLineHighlight Background="clHighlight" Foreground="clHighlightText" FrameColor="clBlack" UseSchemeGlobals="False"/>
           <ahaMouseLink Foreground="clBlue" FrameColor="clNone" Style="fsUnderline" UseSchemeGlobals="False"/>
           <ahaTextBlock Background="clHighlight" Foreground="clHighlightText" UseSchemeGlobals="False"/>
-        </SchemeColor_blue>
+        </SchemeColor_blue_NoLevel_>
       </LangDisassembler_Window>
     </ColorSchemes>
   </Typhon>
