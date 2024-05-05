@@ -305,7 +305,7 @@ inherited
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
-property $param(Name): $param(Type) read __get$param(Name,sync=1) write __set$param(Name,sync=1);|
+property $param(Name): $param(Type) read __Get$param(Name,sync=1) write __Set$param(Name,sync=1);|
 [repeat | repeat]
 $(AttributesStart)
 EnableMakros=true
