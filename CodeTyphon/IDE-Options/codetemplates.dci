@@ -1,4 +1,4 @@
-[arrayd | array declaration (var)]
+[arrayd | 定义静态一维数组(var)]
 $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
@@ -276,7 +276,7 @@ procedure Main;
 begin
   |
 end;
-[/// | /// <summary> </summary>]
+[/// | Delphi大纲式注释]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
@@ -323,7 +323,11 @@ property $param(Name): $param(Type) read _$param(Name,sync=1) write _$param(Name
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
-T$param(name) = record
+P$param(objName) = ^T$param(RecordName,sync=1);
+T$Param(objName,sync=1) = Record
+private
+
+public
   |
 end$AddSemicolon()
 
@@ -358,5 +362,11 @@ public
   constructor Init();
   destructor Done;
   |
-end;
+end$AddSemicolon()
+
+[arr1 | 定义动态一维数组]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+$Param(VariableName): array of $Param(Type);|
 
