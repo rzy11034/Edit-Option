@@ -2090,20 +2090,19 @@
     </Desktop6>
     <Desktop7 Name="BOOK" DockMaster="TIDEGlassDockMaster">
       <Desktop Version="2" FormIdCount="42">
-        <FormIdList a1="MainIDE" a2="MessagesView" a3="SourceNotebook" a4="ProjectInspector" a5="CodeExplorerView" a6="PseudoTerminal" a7="Watches" a8="Inspect" a9="ComponentListForm" a10="CodeBrowser" a11="ObjectInspectorDlg" a12="SearchResults" a13="BreakPoints" a14="Locals" a15="CallStack" a16="DbgEvents" a17="DbgOutput" a18="Threads" a19="CodeOceanForm" a20="FileBrowser" a21="PkgGraphExplorer" a22="EvaluateModify" a23="Registers" a24="Assembler" a25="DbgHistory" a26="UnitDependencies" a27="FPDocEditor" a28="ClipBrdHistory" a29="EditorFileManager" a30="AnchorEditor" a31="TabOrderEditor" a32="IssueBrowser" a33="JumpHistory" a34="ComponentList" a35="AdvanceFindForm" a36="PackageEditor_DeepStar_Lib" a37="MultiProjectEditor" a38="MacroListView" a39="IDETodoWindow" a40="PackageEditor_ds_SDL_IDE" a41="PackageEditor_pl_OpenCV" a42="MacroListViewer"/>
+        <FormIdList a1="MainIDE" a2="SourceNotebook" a3="MessagesView" a4="ProjectInspector" a5="CodeExplorerView" a6="PseudoTerminal" a7="Watches" a8="Inspect" a9="ComponentListForm" a10="CodeBrowser" a11="ObjectInspectorDlg" a12="SearchResults" a13="BreakPoints" a14="Locals" a15="CallStack" a16="DbgEvents" a17="DbgOutput" a18="Threads" a19="CodeOceanForm" a20="FileBrowser" a21="PkgGraphExplorer" a22="EvaluateModify" a23="Registers" a24="Assembler" a25="DbgHistory" a26="UnitDependencies" a27="FPDocEditor" a28="ClipBrdHistory" a29="EditorFileManager" a30="AnchorEditor" a31="TabOrderEditor" a32="IssueBrowser" a33="JumpHistory" a34="ComponentList" a35="AdvanceFindForm" a36="PackageEditor_DeepStar_Lib" a37="MultiProjectEditor" a38="MacroListView" a39="IDETodoWindow" a40="PackageEditor_ds_SDL_IDE" a41="PackageEditor_pl_OpenCV" a42="MacroListViewer"/>
       </Desktop>
       <MainIDE>
         <CustomPosition Left="70" Top="27" Width="1847" Height="57"/>
         <Visible Value="True"/>
       </MainIDE>
-      <MessagesView>
-        <CustomPosition Left="573" Top="784" Width="1346" Height="293"/>
-        <Visible Value="True"/>
-      </MessagesView>
       <SourceNotebook>
-        <CustomPosition Left="1006" Top="77" Width="912" Height="999"/>
+        <CustomPosition Left="1006" Top="64" Width="912" Height="1012"/>
         <Visible Value="True"/>
       </SourceNotebook>
+      <MessagesView>
+        <CustomPosition Left="573" Top="784" Width="1346" Height="293"/>
+      </MessagesView>
       <ProjectInspector>
         <CustomPosition Left="70" Top="124" Width="502" Height="915"/>
       </ProjectInspector>
@@ -2112,7 +2111,6 @@
       </CodeExplorerView>
       <PseudoTerminal>
         <CustomPosition Left="572" Top="784" Width="1348" Height="296"/>
-        <Visible Value="True"/>
       </PseudoTerminal>
       <Watches>
         <CustomPosition Left="70" Top="90" Width="599" Height="478"/>
@@ -2327,7 +2325,7 @@
           <Button64 Name="Close"/>
         </ToolBar1>
       </IDECoolBarOptions>
-      <EditorToolBarOptions Visible="False" Version="1" Count="37">
+      <EditorToolBarOptions Version="1" Count="37">
         <Button1 Name="Toggle view Terminal Output"/>
         <Button2 Name="NewUnit"/>
         <Button3 Name="NewForm"/>
@@ -2393,21 +2391,21 @@
               </Bounds>
             </Item1>
             <Item2 Name="SourceNotebook" Type="Control">
-              <Bounds Left="1006" Top="40" Width="912" Height="999">
+              <Bounds Left="1006" Top="27" Width="912" Height="1012">
                 <WorkArea>
                   <Rect Left="70" Top="27" Right="1920" Bottom="1080"/>
                 </WorkArea>
               </Bounds>
             </Item2>
             <Item3 Name="MessagesView" Type="Control">
-              <Bounds Left="573" Top="747" Width="1346" Height="293">
+              <Bounds Left="1011" Top="747" Width="908" Height="293">
                 <WorkArea>
                   <Rect Left="70" Top="27" Right="1920" Bottom="1080"/>
                 </WorkArea>
               </Bounds>
             </Item3>
             <Item4 Name="PseudoTerminal" Type="Control">
-              <Bounds Left="572" Top="747" Width="1348" Height="296">
+              <Bounds Left="1010" Top="747" Width="910" Height="296">
                 <WorkArea>
                   <Rect Left="70" Top="27" Right="1920" Bottom="1080"/>
                 </WorkArea>
