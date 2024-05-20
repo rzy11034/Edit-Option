@@ -1,23 +1,31 @@
-[arrayd | 定义静态一维数组(var)]
+[/// | Delphi大纲式注释]
 $(AttributesStart)
 EnableMakros=true
-RemoveChar=true
 !FileVersion=1
 $(AttributesEnd)
-$Param(VariableName): array[0..$Param(HighNumber)] of $Param(Type);
-|
+/// <summary> | </summary>
+[arr1 | 定义动态一维数组]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+$Param(VariableName): array of $Param(Type);|
 [arrayc | array declaration (const)]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
 array[$param(0)..$param(1)] of $param(Type) = (|);
-[cases | case statement]
+[arrayd | 定义静态一维数组(var)]
+$(AttributesStart)
+EnableMakros=true
+RemoveChar=true
+$(AttributesEnd)
+$Param(VariableName): array[0..$Param(HighNumber)] of $Param(Type);|
+[b | begin end]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
-case $param(var) of
-  : |;
-  : ;
+begin
+  |
 end$AddSemicolon()
 [be | begin end else begin end]
 $(AttributesStart)
@@ -39,27 +47,14 @@ case $param(var) of
   : ;
 else ;
 end$AddSemicolon()
-[classf | class declaration (all parts)]
+[cases | case statement]
 $(AttributesStart)
 EnableMakros=true
-RemoveChar=true
 $(AttributesEnd)
-T$Param(ClassName) = class($Param(TObject))
-private
-
-public
-  constructor Create;
-  destructor Destroy; override;
-  |
-end;
-[classd | class declaration (no parts)]
-$(AttributesStart)
-EnableMakros=true
-RemoveChar=true
-$(AttributesEnd)
-T$Param(ClassName) = class($Param(TObject))
-|
-end;
+case $param(var) of
+  : |;
+  : ;
+end$AddSemicolon()
 [classc | class declaration (with Create/Destroy overrides)]
 $(AttributesStart)
 EnableMakros=true
@@ -77,13 +72,37 @@ public
 published
 
 end;
-[fors | for (no begin/end)]
+[classd | class declaration (no parts)]
 $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-for $Param(CounterVar) := $Param(0) to $Param(Count) do
+T$Param(ClassName) = class($Param(TObject))
+|
+end;
+[classf | class declaration (all parts)]
+$(AttributesStart)
+EnableMakros=true
+RemoveChar=true
+$(AttributesEnd)
+T$Param(ClassName) = class($Param(TObject))
+private
+
+public
+  constructor Create;
+  destructor Destroy; override;
   |
+end;
+[constructor | constructor]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+constructor Create(|);
+[destructor | destructor]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+destructor Destroy; override;
 [forb | for statement]
 $(AttributesStart)
 EnableMakros=true
@@ -93,6 +112,31 @@ for $Param(CounterVar) := $Param(0) to $Param(Count) do
 begin
   |
 end$AddSemicolon()
+[ford | for statement - (descending order)]
+$(AttributesStart)
+EnableMakros=true
+RemoveChar=true
+$(AttributesEnd)
+for $Param(CounterVar) := $Param(integer) downto $Param(0) do
+begin
+  |
+end$AddSemicolon()
+[fors | for (no begin/end)]
+$(AttributesStart)
+EnableMakros=true
+RemoveChar=true
+$(AttributesEnd)
+for $Param(CounterVar) := $Param(0) to $Param(Count) do
+  |
+[fpc | Conditional FPC Mode]
+$(AttributesStart)
+RemoveChar=true
+EnableMakros=true
+$(AttributesEnd)
+{$IFDEF FPC}
+  {$mode objfpc}{$H+}
+{$ENDIF}
+|
 [function | function declaration]
 $(AttributesStart)
 EnableMakros=true
@@ -101,17 +145,17 @@ function $param(Name)($param( )): $param(Type);
 begin
   |
 end;
+[generic | generic]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+generic
+
 [hexc | HexStr(Cardinal(),8)]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
 HexStr(PtrUInt(|),8)
-[ifs | if (no begin/end)]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-if $Param(Conditional) then
-  |
 [ifb | if statement]
 $(AttributesStart)
 EnableMakros=true
@@ -142,6 +186,94 @@ else
 begin
 
 end$AddSemicolon()
+[ifs | if (no begin/end)]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+if $Param(Conditional) then
+  |
+[inherited | inherited]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+inherited
+
+[main | main]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+procedure Main;
+
+implementation
+
+procedure Main;
+begin
+  |
+end;
+[MSR | ModeSwitch advancedrecords]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+{$ModeSwitch advancedrecords}
+[MSU | ModeSwitch unicodestrings]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+{$ModeSwitch unicodestrings}{$J-}
+[object | Object Type]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+P$param(objName) = ^T$param(objName,sync=1);
+T$Param(objName,sync=1) = object
+private
+
+public
+  constructor Init();
+  destructor Done;
+  |
+end$AddSemicolon()
+[ofall | case of all enums]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+of
+|$OfAll()end;
+[pdrwd | property Double read write default]
+$(AttributesStart)
+!Version=1
+EnableMakros=true
+$(AttributesEnd)
+property $Param(Name): Double read $Param(Get)$Param(Name,sync=1) write $Param(Set)$Param(Name,sync=1) default $Param(Const);|
+[pdrws | property Double read write]
+$(AttributesStart)
+!Version=1
+EnableMakros=true
+$(AttributesEnd)
+property $Param(Name): Double read $Param(Get)$Param(Name,sync=1) write $Param(Set)$Param(Name,sync=1);|
+[pirwd | property Integer read write default]
+$(AttributesStart)
+!Version=1
+EnableMakros=true
+$(AttributesEnd)
+property $Param(Name): Integer read $Param(Get)$Param(Name,sync=1) write $Param(Set)$Param(Name,sync=1) default $Param(Const);|
+[pirws | property Integer read write]
+$(AttributesStart)
+!Version=1
+EnableMakros=true
+$(AttributesEnd)
+property $Param(Name): Integer read $Param(Get)$Param(Name,sync=1) write $Param(Set)$Param(Name,sync=1);|
+[pptgs | property  get set]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+property $param(Name): $param(Type) read __Get$param(Name,sync=1) write __Set$param(Name,sync=1);|
+[pptrw | property read write]
+$(AttributesStart)
+EnableMakros=true
+IgnoreForSelection=true
+$(AttributesEnd)
+property $param(Name): $param(Type) read _$param(Name,sync=1) write _$param(Name,sync=1);|
 [procedure | procedure declaration]
 $(AttributesStart)
 EnableMakros=true
@@ -150,12 +282,82 @@ procedure $param(Name)($param( ));
 begin
   |
 end;
-[ofall | case of all enums]
+[prwd | property read write default]
+$(AttributesStart)
+!Version=1
+EnableMakros=true
+$(AttributesEnd)
+property $Param(Name) read $Param(Get)$Param(Name,sync=1) write $Param(Set)$Param(Name,sync=1) default $Param(Const);|
+[prws | property read write]
+$(AttributesStart)
+!Version=1
+EnableMakros=true
+$(AttributesEnd)
+property $Param(Name) read $Param(Get)$Param(Name,sync=1) write $Param(Set)$Param(Name,sync=1);|
+[psrw | property string read write]
+$(AttributesStart)
+!Version=1
+EnableMakros=true
+$(AttributesEnd)
+property $Param(Name): string read $Param(Get)$Param(Name,sync=1) write $Param(Set)$Param(Name,sync=1);|
+[raise | raise]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
-of
-|$OfAll()end;
+raise Exception.Create('Error Message');
+
+[records | record]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+P$param(objName) = ^T$param(RecordName,sync=1);
+T$Param(objName,sync=1) = Record
+private
+
+public
+  |
+end$AddSemicolon()
+[repeat | repeat]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+repeat
+  |
+until $param(var);
+[sepb | //(*════════════════════════════════════*)]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+//(*═══════════════════════════════════════════════════════════════════════
+|
+//═══════════════════════════════════════════════════════════════════════*)
+[sepl | //══════════════════════════════════════]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+//═════════════════════════════════════════════════════════════════════════
+[specialize | specialize]
+$(AttributesStart)
+EnableMakros=true
+$(AttributesEnd)
+specialize
+[todo | ToDo item creator]
+$(AttributesStart)
+EnableMakros=true
+RemoveChar=true
+$(AttributesEnd)
+{ TODO -o$Param(Author) : $Param(Note) } |
+[trycf | try finally (with Create/Free)]
+$(AttributesStart)
+EnableMakros=true
+RemoveChar=true
+$(AttributesEnd)
+$Param(VarName) := $Param(TMyClassName).Create($Param());
+try
+  |
+finally
+  $Param(VarName,Sync=1).Free;
+end;
 [trye | try except]
 $(AttributesStart)
 EnableMakros=true
@@ -175,17 +377,11 @@ try
 finally
   $Param(FreeStatement,default)
 end$AddSemicolon()
-[trycf | try finally (with Create/Free)]
+[w | writeln]
 $(AttributesStart)
 EnableMakros=true
-RemoveChar=true
 $(AttributesEnd)
-$Param(VarName) := $Param(TMyClassName).Create($Param());
-try
-  |
-finally
-  $Param(VarName,Sync=1).Free;
-end;
+writeln('$ProcedureName() '|)$AddSemicolon()
 [whileb | while statement]
 $(AttributesStart)
 EnableMakros=true
@@ -210,20 +406,6 @@ with $Param(Object) do
 begin
   |
 end$AddSemicolon()
-[b | begin end]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-begin
-  |
-end$AddSemicolon()
-[withs | with (no begin)]
-$(AttributesStart)
-EnableMakros=true
-RemoveChar=true
-$(AttributesEnd)
-with $Param(Object) do
-  |
 [withc | with for components]
 $(AttributesStart)
 EnableMakros=true
@@ -240,133 +422,10 @@ begin
   Caption:='$Param(CaptionText)';
 end;
 |
-[fpc | Conditional FPC Mode]
-$(AttributesStart)
-RemoveChar=true
-EnableMakros=true
-$(AttributesEnd)
-{$IFDEF FPC}
-  {$mode objfpc}{$H+}
-{$ENDIF}
-|
-[todo | ToDo item creator]
+[withs | with (no begin)]
 $(AttributesStart)
 EnableMakros=true
 RemoveChar=true
 $(AttributesEnd)
-{ TODO -o$Param(Author) : $Param(Note) } |
-[w | writeln]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-writeln('$ProcedureName() '|)$AddSemicolon()
-[generic | generic]
-generic
-[specialize | specialize]
-specialize
-[main | main]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-procedure Main;
-
-implementation
-
-procedure Main;
-begin
+with $Param(Object) do
   |
-end;
-[/// | Delphi大纲式注释]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-/// <summary> | </summary>
-[constructor | constructor]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-constructor Create(|);
-[destructor | destructor]
-destructor Destroy; override;
-[raise | raise]
-raise Exception.Create('Error Message');
-[ford | for statement - (descending order)]
-$(AttributesStart)
-EnableMakros=true
-RemoveChar=true
-$(AttributesEnd)
-for $Param(CounterVar) := $Param(integer) downto $Param(0) do
-begin
-  |
-end$AddSemicolon()
-[inherited | inherited]
-inherited
-[pptgs | property  get set]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-property $param(Name): $param(Type) read __Get$param(Name,sync=1) write __Set$param(Name,sync=1);|
-[repeat | repeat]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-repeat
-  |
-until $param(var);
-[pptrw | property read write]
-$(AttributesStart)
-EnableMakros=true
-IgnoreForSelection=true
-$(AttributesEnd)
-property $param(Name): $param(Type) read _$param(Name,sync=1) write _$param(Name,sync=1);|
-[records | record]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-P$param(objName) = ^T$param(RecordName,sync=1);
-T$Param(objName,sync=1) = Record
-private
-
-public
-  |
-end$AddSemicolon()
-
-[MSU | ModeSwitch unicodestrings]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-{$ModeSwitch unicodestrings}{$J-}
-[MSR | ModeSwitch advancedrecords]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-{$ModeSwitch advancedrecords}
-[sepb | //(*════════════════════════════════════*)]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-//(*═══════════════════════════════════════════════════════════════════════
-|
-//═══════════════════════════════════════════════════════════════════════*)
-[sepl | //══════════════════════════════════════]
-//═════════════════════════════════════════════════════════════════════════
-[object | Object Type]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-P$param(objName) = ^T$param(objName,sync=1);
-T$Param(objName,sync=1) = object
-private
-
-public
-  constructor Init();
-  destructor Done;
-  |
-end$AddSemicolon()
-
-[arr1 | 定义动态一维数组]
-$(AttributesStart)
-EnableMakros=true
-$(AttributesEnd)
-$Param(VariableName): array of $Param(Type);|
-
