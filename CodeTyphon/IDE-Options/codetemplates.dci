@@ -336,6 +336,8 @@ $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
 //═════════════════════════════════════════════════════════════════════════
+|
+//═════════════════════════════════════════════════════════════════════════
 [specialize | specialize]
 $(AttributesStart)
 EnableMakros=true

@@ -6,8 +6,8 @@
     <LineLengthXMLConfig Value="150"/>
     <ClassHeaderComments Value="False"/>
     <MethodInsertPolicy Value="Alphabetically"/>
-    <PropertyReadIdentPrefix Value="__get"/>
-    <PropertyWriteIdentPrefix Value="__set"/>
+    <PropertyReadIdentPrefix Value="__Get"/>
+    <PropertyWriteIdentPrefix Value="__Set"/>
     <PrivateVariablePrefix Value="_"/>
     <SetPropertyVariablename Value="value"/>
     <SetPropertyVariableUseConst Value="True"/>

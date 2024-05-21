@@ -3,13 +3,16 @@
   <EditorOptions Version="13">
     <Color Version="13">
       <LangObjectPascal Version="13">
-        <ColorScheme Value="Colors"/>
+        <ColorScheme Value="Color_blue"/>
         <SchemeTwilight>
           <Assembler Foreground="3404810" UseSchemeGlobals="False"/>
           <Comment Foreground="1052906" UseSchemeGlobals="False"/>
           <Directive Foreground="65291" UseSchemeGlobals="False"/>
           <Reserved_word Foreground="12434804" UseSchemeGlobals="False"/>
         </SchemeTwilight>
+        <SchemeColor_blue>
+          <PasDoc_Unknown Background="clNone"/>
+        </SchemeColor_blue>
       </LangObjectPascal>
       <Globals Version="13">
         <SchemeTwilight>
@@ -24,19 +27,25 @@
         </SchemeColors>
       </Globals>
     </Color>
-    <Display EditorFontSize="12" DoNotWarnForFont="Consolas" EditorFont="Consolas" ExtraLineSpacing="0"/>
+    <Display EditorFontSize="13" DoNotWarnForFont="Consolas" EditorFont="Consolas" ExtraLineSpacing="0"/>
     <KeyMapping>
-      <default Count="2">
+      <default Count="4">
         <Version Value="6"/>
         <printselection Value="80,1,0,0,0,0,0,0"/>
-        <Item1 Name="Find procedure definiton">
-          <KeyB Default="False" Key1="81" Shift1="4"/>
-          <KeyA Default="False" Key1="38" Shift1="3"/>
+        <Item1 Name="DeclareVariable">
+          <KeyA Default="False" Key1="88" Shift1="4"/>
         </Item1>
-        <Item2 Name="Identifier completion">
+        <Item2 Name="Find procedure definiton">
+          <KeyA Default="False" Key1="38" Shift1="3"/>
+          <KeyB Default="False" Key1="81" Shift1="4"/>
+        </Item2>
+        <Item3 Name="Identifier completion">
           <KeyA Default="False" Key1="32" Shift1="1"/>
           <KeyB Default="False" Key1="74" Shift1="4"/>
-        </Item2>
+        </Item3>
+        <Item4 Name="PrintSelection">
+          <KeyA Default="False"/>
+        </Item4>
       </default>
     </KeyMapping>
     <General>
@@ -46,7 +55,7 @@
       <ScrollOnEditLeftOptions KeepBorderDistance="2" KeepBorderDistancePercent="0" ScrollExtraColumns="5" ScrollExtraPercent="20" ScrollExtraMax="10"/>
       <ScrollOnEditRightOptions KeepBorderDistance="0" KeepBorderDistancePercent="0" ScrollExtraColumns="10" ScrollExtraPercent="30" ScrollExtraMax="25"/>
     </Misc>
-    <CodeTools CodeTemplateFileName="C:\Users\Administrator\AppData\Roaming\typhon64\codetemplates.dci" CompletionLongLineHintTypeCompletionLongLineHintType="sclpExtendRightOnly" AutoDelayInMSec="10" AutoDelayHintInMSec="501" AutoRemoveEmptyMethods="True"/>
+    <CodeTools CodeTemplateFileName="C:\Users\Administrator\AppData\Roaming\typhon64\codetemplates.dci" AutoDelayInMSec="10" AutoDelayHintInMSec="501" AutoRemoveEmptyMethods="True"/>
     <Mouse>
       <Default Version="1" CtrlWheel="mwaScrollPage" AltCtrlWheel="mwaScrollPageLessOne" AltCtrlHorizWheel="mwaScrollHorizPageLessOne"/>
     </Mouse>
