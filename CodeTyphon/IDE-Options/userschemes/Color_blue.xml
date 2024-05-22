@@ -93,12 +93,11 @@
           <ahaUnknownBreakpoint Background="clRed" Foreground="clBlack"/>
           <Assembler Foreground="clSkyBlue"/>
           <Case_label Foreground="clMoneyGreen"/>
-          <Comment Foreground="5263440" Style="fsItalic"/>
+          <Comment Foreground="5263440" Style="fsItalic" UseSchemeGlobals="False"/>
           <Directive Foreground="159"/>
           <IDE_Directive Foreground="159"/>
-          <Modifier Style="fsBold" UseSchemeGlobals="False"/>
+          <Modifier Foreground="15117312" UseSchemeGlobals="False"/>
           <Number Foreground="8257405"/>
-          <PasDoc_Unknown Background="clMoneyGreen"/>
           <Reserved_word Foreground="15117312"/>
           <String Foreground="clFuchsia"/>
           <Symbol Foreground="clLime"/>
@@ -227,7 +226,7 @@
           <Text Foreground="clBlack" Style="fsBold"/>
         </SchemeColor_blue>
       </LangXML_document>
-      <LangLazarus_Form_definition Version="13">
+      <LangTyphon_Form_definition Version="13">
         <SchemeColor_blue>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" Style="" BackPriority="0" ForePriority="0" FramePriority="0" BackAlpha="0" FrameAlpha="0"/>
           <ahaCodeFoldingTree Background="clNone" Foreground="clNone"/>
@@ -271,13 +270,13 @@
           <ahaTopInfoHint Background="clNone" Foreground="clNone" FrameColor="clNone" FrameStyle="slsSolid" FrameEdges="sfeAround" BackPriority="0" ForePriority="0" FramePriority="0"/>
           <ahaUnknownBreakpoint Background="clNone" Foreground="clNone" BackPriority="0" ForePriority="0" FramePriority="0"/>
           <ahaWordGroup FrameColor="clNone" BackPriority="0" ForePriority="0" FramePriority="0"/>
-          <Comment Foreground="clBlue" Style="fsBold"/>
-          <Key Style="fsBold"/>
-          <Number Foreground="clNavy"/>
-          <String Foreground="clBlue"/>
-          <Symbol Foreground="clRed"/>
+          <Comment Foreground="5263440" Style="fsItalic"/>
+          <Key Foreground="15117312"/>
+          <Number Foreground="8257405"/>
+          <String Foreground="clFuchsia"/>
+          <Symbol Foreground="clLime"/>
         </SchemeColor_blue>
-      </LangLazarus_Form_definition>
+      </LangTyphon_Form_definition>
       <LangPerl Version="13">
         <SchemeColor_blue>
           <ahaBracketMatch Background="clNone" Foreground="clNone" FrameColor="clNone" BackAlpha="0" FrameAlpha="0"/>
