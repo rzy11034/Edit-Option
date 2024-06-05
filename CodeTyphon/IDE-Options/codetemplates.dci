@@ -1,4 +1,4 @@
-[/// | Delphi大纲式注释]
+[commentd | Delphi大纲式注释]
 $(AttributesStart)
 EnableMakros=true
 !FileVersion=1
@@ -324,14 +324,14 @@ $(AttributesEnd)
 repeat
   |
 until $param(var);
-[sepb | //(*════════════════════════════════════*)]
+[commentb | //(*════════════════════════════════════*)]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
 //(*═══════════════════════════════════════════════════════════════════════
 |
 //═══════════════════════════════════════════════════════════════════════*)
-[sepl | //══════════════════════════════════════]
+[commentl | //══════════════════════════════════════]
 $(AttributesStart)
 EnableMakros=true
 $(AttributesEnd)
